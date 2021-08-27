@@ -1,5 +1,7 @@
 # Belajar Dasar Pemrograman Web
 
+Kelas ini membahas mengenai dasar-dasar yang harus dipahami dalam pengembangan dasar sebuah website seperti html, css, javascript, responsive layout, dan web storage. Kelas ini membahas tuntas dasar HTML, CSS dan JavaScript sebagai tiga fondasi pembuatan website..
+
 Materi yang dipelajari:
 
 - **Pendahuluan**: Pengenalan mengenai website, apa itu website, tools dalam mengembangkan sebuah website.
@@ -15,4 +17,4 @@ Materi yang dipelajari:
 
 ### 1. Genius Education Landing Page
 
-[![ForTheBadge uses-html](http://ForTheBadge.com/images/badges/uses-html.svg)](http://ForTheBadge.com)
+[![ForTheBadge uses-html](http://ForTheBadge.com/images/badges/uses-html.svg)](https://cperdiansyah.github.io/Dicoding-Front-End-Web-Developer/belajar-dasar-pemrograman-web/app/)

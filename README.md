@@ -10,8 +10,9 @@ Learning Path Front End Web Developer ini didapatkan dari program beasiswa [IDCa
 
 ## Submission
 
-- [Belajar Dasar Pemrograman Weba →](#)
+- [Belajar Dasar Pemrograman Web →](https://github.com/cperdiansyah/Dicoding-Front-End-Web-Developer/tree/main/belajar-dasar-pemrograman-web)
 
+- [Belajar Membuat Front-End Web untuk Pemula →](https://github.com/cperdiansyah/Dicoding-Front-End-Web-Developer/tree/main/belajar-membuat-front-end-web-untuk-pemula)
 ## Result
 
 | No.  | Course                                          |  Issued    | Cert link |

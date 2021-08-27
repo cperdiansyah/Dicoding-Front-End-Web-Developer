@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="shortcut icon"
+      href="https://i.pinimg.com/736x/d9/20/52/d920527f39800943d9fc5f5264acc866.jpg"
+      type="image/x-icon"
+    />
+    <title>Bookshelf Apps</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Material Icon -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="head_bar">
+      <h1 class="head_bar__title">Bookshelf Apps</h1>
+    </header>
+    <main>
+      <div class="bookshelf-wrap">
+        <div class="bookshelf-operation">
+          <section class="section input_section shadow">
+            <h2>Masukkan Buku Baru</h2>
+
+            <form id="inputBook">
+              <div class="input">
+                <label for="inputBookTitle">Judul</label>
+                <input id="inputBookTitle" type="text" />
+              </div>
+              <div class="input">
+                <label for="inputBookAuthor">Penulis</label>
+                <input id="inputBookAuthor" type="text" />
+              </div>
+              <div class="input">
+                <label for="inputBookYear">Tahun</label>
+                <input id="inputBookYear" type="number" />
+              </div>
+              <div class="input_inline">
+                <label for="inputBookIsComplete">Selesai dibaca</label>
+                <input id="inputBookIsComplete" type="checkbox" />
+              </div>
+              <button id="bookSubmit" type="submit">
+                Masukkan Buku ke rak
+                <span class="isNotCompleted" style="display: inline-block"
+                  >Belum selesai dibaca</span
+                >
+                <span class="isCompleted" style="display: none"
+                  >Selesai dibaca</span
+                >
+              </button>
+            </form>
+          </section>
+
+          <!-- Optional Section For Bookshelf Apps -->
+          <div class="section optional_section">
+            <section class="information_section shadow">
+              <h2>Informasi Rak Buku (Opsional)</h2>
+
+              <div class="information-wrap">
+                <div class="information-item bg-primary text-white">
+                  <span class="material-icons-outlined"> info </span>
+                  <span>Jumlah Buku</span>
+                  <span id="totalBookCount">0</span>
+                </div>
+
+                <div class="information-item bg-danger text-white">
+                  <span class="material-icons-outlined"> cancel </span>
+                  <span>Belum Selesai Baca</span>
+                  <span id="totalnotCompleteCount">0</span>
+                </div>
+
+                <div class="information-item bg-success text-white">
+                  <span class="material-icons-outlined"> task_alt </span>
+                  <span>Selesai Baca</span>
+                  <span id="totalCompleteCount">0</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="search_section shadow">
+              <h2>Cari Buku (Opsional)</h2>
+              <form id="searchBook">
+                <label for="searchBookTitle">Judul</label>
+                <input id="searchBookTitle" type="text" />
+                <button id="searchSubmit" type="button">Cari</button>
+                <button
+                  id="resetButton"
+                  class="btn-danger text-white"
+                  type="button"
+                >
+                  Reset Pencarian
+                </button>
+              </form>
+            </section>
+          </div>
+        </div>
+
+        <div class="bookshelf-item">
+          <div class="bookshelf-section">
+            <!-- Belum Selesai Baca -->
+            <section class="book_shelf shadow">
+              <h2>Belum selesai dibaca</h2>
+
+              <div id="incompleteBookshelfList" class="book_list"></div>
+            </section>
+
+            <!-- Selesai Baca -->
+
+            <section class="book_shelf shadow">
+              <h2>Selesai dibaca</h2>
+
+              <div id="completeBookshelfList" class="book_list"></div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="javascript">
+      <script src="assets/js/storage.js"></script>
+
+      <script src="assets/js/main.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,291 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+  font-family: "Open Sans", sans-serif;
+}
+
+input,
+button {
+  font-size: 16px;
+}
+
+.head_bar {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: cornflowerblue;
+  color: white;
+}
+
+main {
+  padding: 16px;
+}
+
+.input_section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+}
+
+.input_section > h2 {
+  text-align: center;
+  color: cornflowerblue;
+}
+
+.input_section > form > .input {
+  margin: 8px 0;
+}
+
+.input_section > form > button {
+  background-color: cornflowerblue;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.input_section > form > button > span {
+  font-weight: bold;
+}
+
+.input_section > form > .input > input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.input_section > form > .input > label {
+  color: cornflowerblue;
+  font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+  color: cornflowerblue;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.search_section,
+.information_section {
+  margin: 16px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+}
+
+.search_section > h2,
+.information_section > h2 {
+  color: cornflowerblue;
+}
+
+.search_section > form,
+.information_section > form {
+  padding: 16px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 0.9fr 0.3fr 0.5fr;
+  grid-gap: 10px; 
+}
+
+.search_section > form > label,
+.information_section > form > label {
+  display: flex;
+  align-items: center;
+}
+
+.search_section > form > input,
+.information_section > form > input {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.search_section > form > button,
+.information_section > form > button {
+  background-color: cornflowerblue;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book_shelf {
+  margin: 16px 0 0 0;
+  /* border: 1px solid black; */
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.book_shelf > h2 {
+  color: cornflowerblue;
+}
+
+.book_shelf > .book_list {
+  padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item {
+  padding: 8px 16px 16px 16px;
+  /* border: 1px solid black; */
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.book_shelf > .book_list > .book_item > h3,
+p {
+  margin: 8px 0;
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+  border: 0;
+  padding: 5px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book_shelf > .book_list > .book_item > .action > .green {
+  background-color: darkgreen;
+  color: white;
+}
+
+.book_shelf > .book_list > .book_item > .action > .red {
+  background-color: darkred;
+  color: white;
+}
+
+/* My code */
+
+/* Layouting */
+.bookshelf-operation {
+  display: flex;
+  flex-direction: row;
+}
+.bookshelf-operation .section,
+.bookshelf-section section {
+  width: 48%;
+  margin: 1rem auto;
+}
+.information_section {
+  margin-top: 0;
+  min-height: 59%;
+}
+
+.bookshelf-item {
+  width: 100% !important;
+}
+
+.bookshelf-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.input_section {
+  max-width: 800px;
+  margin: 0;
+  margin-right: auto;
+}
+
+.bookshelf-section section {
+  width: calc(100% / 2);
+  margin: 1rem 0.25rem;
+}
+.information-wrap{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  margin: auto;
+}
+.information-item {
+
+  border-radius: 10px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.5rem;
+  padding:1rem;
+}
+
+.information-item  span{
+  padding-top: .4rem;
+}
+
+.book_item{
+  display:flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+.action-control-book{
+  /* margin-top: 30px; */
+  display:flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+
+.action-control-book button{
+  margin:  .5rem auto !important ;
+}
+
+/*End Layouting */
+
+.bg-primary,
+.btn-primary {
+  background-color: #5e72e4 !important;
+}
+.bg-dark-primary,
+.btn-dark-primary {
+  background-color: #3C4EB1 !important;
+}
+
+.bg-success,
+.btn-success {
+  background-color: #2DCE89 !important;
+}
+.bg-danger,
+.btn-danger {
+  background-color: #F5365C !important;
+}
+
+.text-white {
+  color: #fff !important;
+
+}
+
+.text-black {
+  color: rgb(0,0,0)!important;
+}
+
+.text-black-50{
+  color: rgba(0,0,0,.5)!important;
+}
+.text-black-25{
+  color: rgba(0,0,0,.25)!important;
+}
+
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+}
