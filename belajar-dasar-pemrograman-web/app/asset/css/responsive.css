@@ -1,0 +1,533 @@
+@media all and (max-width: 1000px) {
+
+    .top-wrapper {
+        height: 650px;
+        background-size: cover;
+    }
+
+    .header-right a {
+        padding: 0 15px;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .top-wrapper .container {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .heading {
+        padding-top: 10%;
+
+    }
+
+    .heading h1 {
+        margin-top: 0;
+        font-size: 30px;
+        padding-top: 20px;
+    }
+
+    .heading h2 {
+        margin-bottom: 20px;
+        font-size: 28px;
+    }
+
+    .top-wrapper p {
+        padding: 10px;
+        color: #000;
+        font-size: 14px;
+        text-align: left;
+
+    }
+
+    .headings h1 {
+        font-size: 30px;
+    }
+
+    .about-wrapper img {
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 2px 6px 12px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    figure {
+        margin: 10px 20px;
+    }
+
+    .about-wrapper figcaption {
+        width: 300px;
+    }
+
+    .about-wrapper .paragraf p {
+        font-size: 16px;
+        margin-top: 0;
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    }
+
+    .feature {
+        margin-bottom: 20px;
+    }
+
+    .features-wrapper {
+        padding: 0 30px;
+    }
+
+    /*Informasi saya bagian kiri*/
+    .general-bottom {
+        text-align: left;
+    }
+
+    aside img {
+        width: 80%;
+    }
+
+    aside figcaption {
+        font-size: 15px;
+    }
+
+    .general-top figure {
+        width: 98%;
+    }
+
+    .general-bottom {
+        padding: 0;
+        padding-top: 15px;
+    }
+
+    .about-me p {
+        font-size: 13px;
+    }
+
+    .about-me h2 {
+        font-size: 22px;
+    }
+
+    #email {
+        font-size: 10px;
+    }
+
+    .general-bottom span {
+        font-size: 14px;
+    }
+
+    /*Informasi saya bagian kanan*/
+    h4 {
+        font-size: 14px;
+    }
+
+    .social-list a {
+        color: #000;
+        font-size: 2.3em !important;
+        width: 50px !important;
+        margin: 0 10px;
+    }
+
+    /*footer*/
+
+    .copyright {
+        font-size: 14px;
+
+    }
+
+    .footer-content {
+        padding: 5px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .footer-section {
+        padding: 0 5px;
+
+    }
+
+    .footer-content h3 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .footer-content p {
+        font-size: 14px;
+    }
+
+    .footer-content a {
+        color: #d3d3d3;
+        font-size: 14px;
+    }
+
+    .tentang {
+        margin-right: 30px;
+
+    }
+
+    .layanan {
+        width: 25%;
+    }
+
+    .layanan p {
+        width: 82%;
+    }
+
+    .footer-list li {
+        width: 55%;
+    }
+
+    @media all and (max-width: 679px) {
+        #icon {
+            display: block;
+        }
+
+        /*beranda*/
+        .top-wrapper {
+            margin-top: -50px;
+            height: 600px;
+            background-size: cover;
+        }
+
+        .heading {
+            text-align: left;
+            opacity: 0.9;
+        }
+
+        .heading h1 {
+            font-size: 22px !important;
+            padding-top: 9em;
+        }
+
+        .heading h2 {
+            margin-bottom: 16px;
+            font-size: 20px !important;
+        }
+
+        .list {
+            display: none;
+        }
+
+        .top-wrapper .container {
+            width: 100%;
+        }
+
+        .top-wrapper .paragraf p {
+            margin-top: 20px;
+            width: 99%;
+            color: #f4f6ff;
+            text-shadow: 3px 3px 3px rgba(94, 94, 94, 1);
+            font-size: 13px;
+        }
+
+        .daftar {
+            width: 95%;
+        }
+
+        
+
+        /*profil*/
+        .headings h1 {
+            padding: 50px 0 30px 0;
+        }
+
+        .about-wrapper .container {
+            flex-direction: column;
+        }
+
+        .about-wrapper {
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .about-wrapper figure {
+            height: auto;
+            width: 90%;
+        }
+
+        .about-wrapper figure img {
+            width: 100%;
+        }
+
+        /*Fasilitas*/
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        }
+
+        .feature {
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        /*kontak*/
+        .contact-wrapper {
+            height: 600px;
+        }
+
+        /*tentang saya*/
+        .dev-wrapper {
+            height: 800px;
+        }
+
+        .dev-wrapper h1 {
+            padding: 50px 0 30px 0;
+        }
+
+        .general-info {
+            width: 100%;
+            height: 25%;
+
+        }
+
+        .my-info {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin: 0 auto;
+        }
+
+        .general-top {
+            margin-right: 20px;
+            width: 40%;
+        }
+
+        .general-info img {
+            width: 120px;
+        }
+
+        .general-info figcaption {
+            padding-top: 10px;
+        }
+
+        .general-bottom {
+            padding: 0 5px;
+            padding-top: 15px;
+            width: 60%;
+        }
+
+        .general-bottom p,
+        #email {
+            font-size: 13px;
+            width: 98%;
+        }
+
+        .general-bottom span {
+            font-size: 16px;
+        }
+
+        .advance-info {
+            width: 90%;
+            height: auto;
+        }
+
+        .horizontal {
+            width: 65%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            margin-right: 15px;
+        }
+
+
+
+        .info {
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+        }
+
+        .bio {
+            width: 100%;
+        }
+
+        .educations {
+            width: auto;
+            margin: 0;
+        }
+
+        .my-social {
+            width: 30%;
+            height: auto;
+            margin: 15px auto;
+        }
+
+        .social-media ul {
+            width: 95%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+            padding: 0;
+            margin: 0 auto;
+        }
+
+
+        .social-media li {
+            width: 100%
+        }
+
+        .social-media a {
+            font-size: 2em !important;
+            margin: 10px;
+        }
+
+
+
+        /*footer*/
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            width: 95%;
+            margin: auto;
+        }
+
+        .tentang {
+            width: 100%;
+        }
+
+        .layanan {
+            width: 100%;
+        }
+
+        .layanan p {
+            width: 80%;
+            margin: 5px auto;
+            text-align: center;
+        }
+
+        .layanan a {
+            font-size: 15px;
+        }
+
+        .social {
+            width: 100%;
+            text-align: center;
+        }
+
+        .footer-section {
+            margin-top: 20px;
+        }
+
+        .up {
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            font-size: 35px;
+            transition: ease all 0.3s;
+            position: fixed;
+            right: 15px;
+            bottom: 15px;
+            z-index: 20;
+            opacity: 0.5;
+        }
+    }
+
+    @media all and (max-width: 499px) {
+        .heading h1 {
+            font-size: 20px !important;
+            padding-top: 7.5em;
+        }
+        .heading h2 {
+            font-size: 18px !important;
+        }
+        .general-info img {
+            width: 100px;
+        }
+        .headings h1{
+            font-size: 20px;
+        }
+         h2{
+            font-size: 18px;
+        }
+        .dev-wrapper h2{
+            font-size: 18px;
+        }
+
+        .general-bottom p {
+            font-size: 12px;
+            width: 98%;
+        }
+
+        #email {
+            font-size: 10px;
+
+        }
+
+        .general-bottom span {
+            font-size: 12px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            margin: 0 15px;
+        }
+
+
+
+        .dev-wrapper {
+            height: 850px;
+        }
+
+        .horizontal {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            padding-bottom: 0;
+        }
+
+        .my-social {
+            width: 100%;
+            height: auto;
+            margin: 15px auto;
+        }
+
+        .social-media ul {
+            width: 90%;
+            display: flex;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        .social-media li {
+            width: 70%
+        }
+
+        .social-media a {
+            font-size: 1.3em !important;
+            margin: 5px;
+            width: 30px !important;
+        }
+
+        .about-wrapper figcaption {
+            width: 90%;
+            font-size: 14px;
+        }
+        
+        .features-wrapper .container{
+            padding: 0;
+        }
+        .features{
+            padding: 0;
+        }
+        .txt-contents {
+            font-size: 16px !important;
+        }
+        h4{
+            padding-top: 5px !important;
+        }
+        .educations h2{
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        .horizontal{
+            margin-top: 20px;
+        }
+    }
