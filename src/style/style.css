@@ -1,3 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+/*Start scroll */
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
+  width: 5px;
+  height: 2px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar {
+  width: 5px;
+  height: 2px;
+  background-color: #000;
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  height: 2px;
+  background-color: #262626;
+}
+
+/* End scroll */
+body {
+  font-family: "Nunito Sans", sans-serif !important;
+}
+
 body nav {
   background-color: transparent;
   -webkit-transition: background-color 0.5s;
@@ -15,8 +43,14 @@ body nav {
   z-index: 10;
 }
 
+body main {
+  background-color: #000;
+  color: #fff;
+}
+
 body .hero {
   margin-top: -5rem;
+  height: 39rem;
 }
 
 body .hero .hero-background {
@@ -91,6 +125,26 @@ body .hero .hero-search #inner_search {
   height: 3rem;
 }
 
+.img-content {
+  -webkit-box-shadow: 0 2px 8px black;
+          box-shadow: 0 2px 8px black;
+  border-radius: 8px;
+  width: 100%;
+  min-height: calc(150px * 1.5);
+  height: calc(150px * 1.5);
+  background: #dbdbdb;
+  overflow: hidden;
+}
+
+.card-border {
+  border-bottom: 8px solid #222;
+}
+
+.card-section {
+  padding: 70px 45px;
+  padding-top: 30px;
+}
+
 .bg-primary,
 .btn-primary {
   background-color: #5e72e4 !important;
@@ -114,5 +168,9 @@ body .hero .hero-search #inner_search {
 .shadow {
   -webkit-box-shadow: 0 0.5rem 1rem black !important;
           box-shadow: 0 0.5rem 1rem black !important;
+}
+
+.radius {
+  border-radius: 5rem;
 }
 /*# sourceMappingURL=style.css.map */

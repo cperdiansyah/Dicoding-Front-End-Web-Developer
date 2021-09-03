@@ -1,13 +1,13 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const { parseHTML } = require("jquery");
+
 
 module.exports = {
   entry: "./src/app.js",
   output: {
+    filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
   },
   module: {
     rules: [
@@ -29,11 +29,18 @@ module.exports = {
           {
             options: {
               name: "[name].[ext]",
-              outputPath: "assets/img",
+              outputPath: "img/",
             },
             loader: "file-loader",
           },
         ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        loader: "file-loader",
+        options: {
+          outputPath: "fonts/",
+        },
       },
     ],
   },
@@ -41,17 +48,36 @@ module.exports = {
   plugins: [
     /* HTML Webpack Plugin */
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
-      favicon: "./src/assets/img/favicon.ico",
+      template: path.resolve(__dirname, "src/index.html"),
+      favicon: path.resolve(__dirname, "src/img/favicon.ico"),
       filename: "index.html",
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true,
+      },
     }),
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "src/assets/img/"),
+          from: path.resolve(__dirname, "src/img/"),
           to: path.resolve(__dirname, "dist/img/"),
         },
       ],
     }),
   ],
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/, /// untuk membuat plugin yang ada di node_modules menjadi chunks
+          name: "vendor", /// nama bundlenya
+          chunks: "all", /// code yang ingin dipisahkan untuk contoh menggunakan semuanya
+        },
+      },
+    },
+  },
 };

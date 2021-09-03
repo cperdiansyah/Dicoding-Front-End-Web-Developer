@@ -11,9 +11,13 @@
   "author": "Chandra Perdiansyah",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "bootstrap": "^5.1.0",
     "copy-webpack-plugin": "^9.0.1",
-    "jquery": "^3.6.0"
+    "jquery": "^3.6.0",
+    "nprogress": "^0.2.0",
+    "regenerator-runtime": "^0.13.9",
+    "webpack-hashed-module-id-plugin": "^0.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",

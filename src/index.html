@@ -10,7 +10,9 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
         <div class="container">
-          <a class="navbar-brand" href="#">MovieNesia</a>
+          <a class="navbar-brand" href="#"
+            >Movie<span class="fw-bold">Nesia</span></a
+          >
           <button
             class="navbar-toggler"
             type="button"
@@ -22,62 +24,22 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-
-          <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link disabled"
-                  href="#"
-                  tabindex="-1"
-                  aria-disabled="true"
-                  >Disabled</a
-                >
-              </li>
-            </ul>
-          </div> -->
         </div>
       </nav>
     </header>
     <main>
       <!-- Hero Section -->
       <div class="hero w-100">
-        <div class="hero-background">
+        <div class="hero-background card-border">
           <div class="hero-background-image-filter">
-            <img src="img/hero-img.jpg" alt="" />
+            <img src="img/hero-img.jpg" alt="" loading="lazy" />
             <div class="img-gradient"></div>
           </div>
         </div>
         <div class="hero-text text-white">
           <div class="text-section text-center">
-            <h1>Selamat Datang</h1>
-            <h2>Jelajahi jutaan film dan acara TV sekarang</h2>
+            <h1>Welcome</h1>
+            <h2>Explore millions of movies and TV shows Now</h2>
           </div>
           <div class="hero-search">
             <form
@@ -99,7 +61,7 @@
                   autofill="off"
                   autocomplete="off"
                   spellcheck="false"
-                  placeholder="Cari sebuah Film, Serial TV, Kru / Aktor..."
+                  placeholder="Search for a Movie, TV Series, Crew/Actor..."
                   value=""
                   class="form-control"
                 />
@@ -110,6 +72,32 @@
                 value="Cari"
               />
             </form>
+          </div>
+        </div>
+      </div>
+      <div class="trending-section card-section card-border">
+        <div class="title-section">
+          <h4>Trending</h4>
+          <div id="trending_scroller">
+            <div class="wrap-trending">
+              <div class="card-movie">
+                <div class="image"></div>
+                <div class="content"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popular-section card-section card-border">
+        <div class="title-section">
+          <h4>What's Popular</h4>
+          <div id="trending_scroller">
+            <div class="wrap-trending">
+              <div class="card-movie">
+                <div class="image"></div>
+                <div class="content"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
