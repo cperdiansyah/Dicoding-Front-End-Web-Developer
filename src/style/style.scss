@@ -1,247 +1,334 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import './reset.css';
 /*Start scroll */
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-track {
-  width: 5px;
-  height: 2px;
-  background-color: transparent;
+    width: 5px;
+    height: 2px;
+    background-color: transparent;
 }
 
 ::-webkit-scrollbar,
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 2px;
-  background-color: #000;
+    width: 5px;
+    height: 2px;
+    background-color: #000;
 }
 
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-thumb {
-  width: 5px;
-  height: 2px;
-  background-color: #262626;
+    width: 5px;
+    height: 2px;
+    background-color: var(--scrollerGrey);
+    border-radius: var(--imageBorderRadius);
+}
+#trending_scroller::-webkit-scrollbar,
+#trending_scroller::-webkit-scrollbar {
+    width: 0px;
+    height: 8px;
+    background-color: #000;
+}
+/* End scroll */
+html {
+    --scrollerGrey: #262626;
+    --lightGrey: 227, 227, 227;
+    --darkerGrey: 200, 200, 200;
+    --accountSilver: 149, 149, 149;
+    --accountPink: 234, 20, 140;
+    --accountPurple: 128, 91, 231;
+    --accountGreen: 1, 210, 119;
+    --accountTeal: 1, 198, 172;
+    --accountLightBlue: 1, 180, 228;
+    --accountBlue: 1, 119, 210;
+    --accountOrange: 210, 119, 1;
+    --accountYellow: 210, 144, 1;
+    --accountRed: 212, 2, 66;
+    --imageBorderRadius: 8px;
+    --maxPrimaryPageWidth: 1400px;
+}
+body {
+    font-family: 'Nunito Sans', sans-serif !important;
+
+    nav {
+        background-color: transparent;
+        -webkit-transition: background-color 0.5s;
+        -o-transition: background-color 0.5s;
+        -moz-transition: background-color 0.5s;
+        transition: background-color 0.5s;
+        position: relative;
+        max-width: 1920px;
+        margin: 0 auto;
+        padding-top: 20px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 5rem;
+        z-index: 10;
+    }
+    main {
+        background-color: #000;
+        color: #fff;
+    }
+    .hero {
+        margin-top: -5rem;
+        height: 39rem;
+        .hero-background {
+            z-index: 0;
+            position: absolute;
+            top: -70px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            height: 43.4rem;
+            .hero-background-image-filter {
+                img {
+                    width: -webkit-fill-available;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .img-gradient {
+                    background: rgba(0, 0, 0, 0.4);
+                    background-image: -webkit-gradient(
+                        linear,
+                        left bottom,
+                        left top,
+                        from(rgba(0, 0, 0, 0.8)),
+                        color-stop(60%, rgba(0, 0, 0, 0)),
+                        to(rgba(0, 0, 0, 0.8))
+                    );
+                    background-image: -webkit-linear-gradient(
+                        bottom,
+                        rgba(0, 0, 0, 0.8) 0,
+                        rgba(0, 0, 0, 0) 60%,
+                        rgba(0, 0, 0, 0.8) 100%
+                    );
+                    background-image: -moz-
+                        oldlinear-gradient(
+                            bottom,
+                            rgba(0, 0, 0, 0.8) 0,
+                            rgba(0, 0, 0, 0) 60%,
+                            rgba(0, 0, 0, 0.8) 100%
+                        );
+                    background-image: -o-linear-gradient(
+                        bottom,
+                        rgba(0, 0, 0, 0.8) 0,
+                        rgba(0, 0, 0, 0) 60%,
+                        rgba(0, 0, 0, 0.8) 100%
+                    );
+                    background-image: linear-gradient(
+                        to top,
+                        rgba(0, 0, 0, 0.8) 0,
+                        rgba(0, 0, 0, 0) 60%,
+                        rgba(0, 0, 0, 0.8) 100%
+                    );
+                }
+
+                .img-gradient {
+                    position: absolute;
+                    background: rgba(0, 0, 0, 0.5);
+                    background-image: -webkit-gradient(
+                            linear,
+                            left bottom,
+                            left top,
+                            color-stop(50%, rgba(0, 0, 0, 0)),
+                            to(rgba(0, 0, 0, 0.7))
+                        ),
+                        radial-gradient(
+                            50% 100%,
+                            rgba(0, 0, 0, 0) 50%,
+                            rgba(0, 0, 0, 0.7) 100%
+                        );
+                    background-image: -webkit-linear-gradient(
+                            bottom,
+                            rgba(0, 0, 0, 0) 50%,
+                            rgba(0, 0, 0, 0.7) 100%
+                        ),
+                        -webkit-radial-gradient(50% 100%, rgba(0, 0, 0, 0) 50%, rgba(
+                                        0,
+                                        0,
+                                        0,
+                                        0.7
+                                    )
+                                    100%);
+                    background-image: -moz-
+                            oldlinear-gradient(
+                                bottom,
+                                rgba(0, 0, 0, 0) 50%,
+                                rgba(0, 0, 0, 0.7) 100%
+                            ),
+                        -moz- oldradial-gradient(50% 100%, rgba(0, 0, 0, 0) 50%, rgba(
+                                        0,
+                                        0,
+                                        0,
+                                        0.7
+                                    )
+                                    100%);
+                    background-image: -o-linear-gradient(
+                            bottom,
+                            rgba(0, 0, 0, 0) 50%,
+                            rgba(0, 0, 0, 0.7) 100%
+                        ),
+                        -o-radial-gradient(50% 100%, rgba(0, 0, 0, 0) 50%, rgba(
+                                        0,
+                                        0,
+                                        0,
+                                        0.7
+                                    )
+                                    100%);
+                    background-image: linear-gradient(
+                            to top,
+                            rgba(0, 0, 0, 0) 50%,
+                            rgba(0, 0, 0, 0.7) 100%
+                        ),
+                        radial-gradient(
+                            50% 100%,
+                            rgba(0, 0, 0, 0) 50%,
+                            rgba(0, 0, 0, 0.7) 100%
+                        );
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    height: inherit;
+                }
+            }
+        }
+
+        .hero-text {
+            position: relative;
+            width: 100%;
+            padding: 75px 0;
+            max-width: 950px;
+            margin: 0 auto;
+            text-align: center;
+            z-index: 1;
+            top: 8rem;
+        }
+        .hero-search {
+            position: relative;
+            width: 100%;
+            padding: 30px 0;
+            // max-width: 950px;
+            margin: 0 auto;
+            text-align: center;
+            z-index: 1;
+            form {
+                display: flex;
+                justify-content: center;
+            }
+
+            #inner_search {
+                width: 25rem;
+                height: 3rem;
+            }
+        }
+    }
+
+    #trending_scroller {
+        margin-top: 1.25rem;
+        overflow: scroll;
+
+        .wrap-trending {
+            display: flex;
+            margin-bottom: 1rem;
+
+            .card-movie {
+                margin-right: 1.25rem;
+                width: 150px;
+                // height: 255px;
+                .image-movie {
+                    .shadow-image {
+                        border-radius: var(--imageBorderRadius);
+                        width: 100%;
+                        min-height: calc(150px * 1.5);
+                        height: calc(150px * 1.5);
+                        background: #dbdbdb;
+                        overflow: hidden;
+                    }
+                    .wrapper-image {
+                        width: 100%;
+                        height: 100%;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                .content {
+                    margin: 0.5rem;
+
+                    h2 {
+                        line-height: 0.7;
+                        a {
+                            font-size: 1rem;
+                            color: #fff !important;
+                            margin: 0;
+                            display: inline-block;
+                            margin-top: 0.5rem;
+                            line-height: 1.2;
+                        }
+                    }
+                    span {
+                        margin: 0;
+                        font-size: 0.8rem;
+                    }
+
+                    .rating {
+                        display: inline-block;
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
 }
 
-/* End scroll */
-body {
-  font-family: "Nunito Sans", sans-serif !important;
-
-  nav {
-    background-color: transparent;
-    -webkit-transition: background-color 0.5s;
-    -o-transition: background-color 0.5s;
-    -moz-transition: background-color 0.5s;
-    transition: background-color 0.5s;
-    position: relative;
-    max-width: 1920px;
-    margin: 0 auto;
-    padding-top: 20px;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 5rem;
-    z-index: 10;
-  }
-  main {
-    background-color: #000;
-    color: #fff;
-  }
-  .hero {
-    margin-top: -5rem;
-    height: 39rem;
-    .hero-background {
-      z-index: 0;
-      position: absolute;
-      top: -70px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      overflow: hidden;
-      height: 43.4rem;
-      .hero-background-image-filter {
-        img {
-          width: -webkit-fill-available;
-          height: 100%;
-          object-fit: cover;
-        }
-        .img-gradient {
-          background: rgba(0, 0, 0, 0.4);
-          background-image: -webkit-gradient(
-            linear,
-            left bottom,
-            left top,
-            from(rgba(0, 0, 0, 0.8)),
-            color-stop(60%, rgba(0, 0, 0, 0)),
-            to(rgba(0, 0, 0, 0.8))
-          );
-          background-image: -webkit-linear-gradient(
-            bottom,
-            rgba(0, 0, 0, 0.8) 0,
-            rgba(0, 0, 0, 0) 60%,
-            rgba(0, 0, 0, 0.8) 100%
-          );
-          background-image: -moz-
-            oldlinear-gradient(
-              bottom,
-              rgba(0, 0, 0, 0.8) 0,
-              rgba(0, 0, 0, 0) 60%,
-              rgba(0, 0, 0, 0.8) 100%
-            );
-          background-image: -o-linear-gradient(
-            bottom,
-            rgba(0, 0, 0, 0.8) 0,
-            rgba(0, 0, 0, 0) 60%,
-            rgba(0, 0, 0, 0.8) 100%
-          );
-          background-image: linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.8) 0,
-            rgba(0, 0, 0, 0) 60%,
-            rgba(0, 0, 0, 0.8) 100%
-          );
-        }
-
-        .img-gradient {
-          position: absolute;
-          background: rgba(0, 0, 0, 0.5);
-          background-image: -webkit-gradient(
-              linear,
-              left bottom,
-              left top,
-              color-stop(50%, rgba(0, 0, 0, 0)),
-              to(rgba(0, 0, 0, 0.7))
-            ),
-            radial-gradient(
-              50% 100%,
-              rgba(0, 0, 0, 0) 50%,
-              rgba(0, 0, 0, 0.7) 100%
-            );
-          background-image: -webkit-linear-gradient(
-              bottom,
-              rgba(0, 0, 0, 0) 50%,
-              rgba(0, 0, 0, 0.7) 100%
-            ),
-            -webkit-radial-gradient(50% 100%, rgba(0, 0, 0, 0) 50%, rgba(
-                    0,
-                    0,
-                    0,
-                    0.7
-                  )
-                  100%);
-          background-image: -moz-
-              oldlinear-gradient(
-                bottom,
-                rgba(0, 0, 0, 0) 50%,
-                rgba(0, 0, 0, 0.7) 100%
-              ),
-            -moz- oldradial-gradient(50% 100%, rgba(0, 0, 0, 0) 50%, rgba(
-                    0,
-                    0,
-                    0,
-                    0.7
-                  )
-                  100%);
-          background-image: -o-linear-gradient(
-              bottom,
-              rgba(0, 0, 0, 0) 50%,
-              rgba(0, 0, 0, 0.7) 100%
-            ),
-            -o-radial-gradient(50% 100%, rgba(0, 0, 0, 0) 50%, rgba(
-                    0,
-                    0,
-                    0,
-                    0.7
-                  )
-                  100%);
-          background-image: linear-gradient(
-              to top,
-              rgba(0, 0, 0, 0) 50%,
-              rgba(0, 0, 0, 0.7) 100%
-            ),
-            radial-gradient(
-              50% 100%,
-              rgba(0, 0, 0, 0) 50%,
-              rgba(0, 0, 0, 0.7) 100%
-            );
-          top: 0;
-          bottom: 0;
-          right: 0;
-          left: 0;
-          height: inherit;
-        }
-      }
-    }
-
-    .hero-text {
-      position: relative;
-      width: 100%;
-      padding: 75px 0;
-      max-width: 950px;
-      margin: 0 auto;
-      text-align: center;
-      z-index: 1;
-      top: 8rem;
-    }
-    .hero-search {
-      position: relative;
-      width: 100%;
-      padding: 30px 0;
-      // max-width: 950px;
-      margin: 0 auto;
-      text-align: center;
-      z-index: 1;
-      form {
-        display: flex;
-        justify-content: center;
-      }
-
-      #inner_search {
-        width: 25rem;
-        height: 3rem;
-      }
-    }
-  }
+.star {
+    color: #f5c518;
 }
 
 .img-content {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 10%);
-  border-radius: 8px;
-  width: 100%;
-  min-height: calc(150px * 1.5);
-  height: calc(150px * 1.5);
-  background: #dbdbdb;
-  overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 10%);
+    border-radius: 8px;
+    width: 100%;
+    min-height: calc(150px * 1.5);
+    height: calc(150px * 1.5);
+    background: #dbdbdb;
+    overflow: hidden;
 }
 
 .card-border {
-  border-bottom: 8px solid #222;
+    border-bottom: 8px solid #222;
 }
 .card-section {
-  padding: 70px 45px;
-  padding-top: 30px;
+    padding: 30px 45px;
 }
 
 .bg-primary,
 .btn-primary {
-  background-color: #5e72e4 !important;
+    background-color: #5e72e4 !important;
 }
 .bg-dark-primary,
 .btn-dark-primary {
-  background-color: #3c4eb1 !important;
+    background-color: #3c4eb1 !important;
 }
 
 .bg-success,
 .btn-success {
-  background-color: #2dce89 !important;
+    background-color: #2dce89 !important;
 }
 .bg-danger,
 .btn-danger {
-  background-color: #f40612 !important;
+    background-color: #f40612 !important;
 }
 .shadow {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 15%) !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 15%) !important;
 }
+
 .radius {
-  border-radius: 5rem;
+    border-radius: 5rem;
 }

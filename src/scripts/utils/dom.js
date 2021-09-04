@@ -1,12 +1,8 @@
-const template = (html, css = "") => {
-  const elem = document.createElement("template");
-  elem.innerHTML = `
-		<style>
-		${css}
-		</style>
+const template = (html) => {
+    const template = `
 		${html}
 	`;
-  return document.importNode(elem.content, true);
+    return template;
 };
 
 export default template;

@@ -1,7 +1,9 @@
 import 'regenerator-runtime';
 import './style/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '@fortawesome/fontawesome-free/js/fontawesome';
-import '@fortawesome/fontawesome-free/js/solid';
-import '@fortawesome/fontawesome-free/js/regular';
-import '@fortawesome/fontawesome-free/js/brands'; 
+import './scripts/utils/fontawesome';
+
+import './scripts/components/components';
+
+import main from './scripts/view/main';
+document.addEventListener('DOMContentLoaded', main);

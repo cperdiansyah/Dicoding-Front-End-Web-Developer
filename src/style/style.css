@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url(c:\laragon\www\movienesia\src\style\reset.css);
 /*Start scroll */
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-track {
@@ -18,12 +19,38 @@
 ::-webkit-scrollbar-thumb {
   width: 5px;
   height: 2px;
-  background-color: #262626;
+  background-color: var(--scrollerGrey);
+  border-radius: var(--imageBorderRadius);
+}
+
+#trending_scroller::-webkit-scrollbar,
+#trending_scroller::-webkit-scrollbar {
+  width: 0px;
+  height: 8px;
+  background-color: #000;
 }
 
 /* End scroll */
+html {
+  --scrollerGrey: #262626;
+  --lightGrey: 227, 227, 227;
+  --darkerGrey: 200, 200, 200;
+  --accountSilver: 149, 149, 149;
+  --accountPink: 234, 20, 140;
+  --accountPurple: 128, 91, 231;
+  --accountGreen: 1, 210, 119;
+  --accountTeal: 1, 198, 172;
+  --accountLightBlue: 1, 180, 228;
+  --accountBlue: 1, 119, 210;
+  --accountOrange: 210, 119, 1;
+  --accountYellow: 210, 144, 1;
+  --accountRed: 212, 2, 66;
+  --imageBorderRadius: 8px;
+  --maxPrimaryPageWidth: 1400px;
+}
+
 body {
-  font-family: "Nunito Sans", sans-serif !important;
+  font-family: 'Nunito Sans', sans-serif !important;
 }
 
 body nav {
@@ -125,6 +152,75 @@ body .hero .hero-search #inner_search {
   height: 3rem;
 }
 
+body #trending_scroller {
+  margin-top: 1.25rem;
+  overflow: scroll;
+}
+
+body #trending_scroller .wrap-trending {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+body #trending_scroller .wrap-trending .card-movie {
+  margin-right: 1.25rem;
+  width: 150px;
+}
+
+body #trending_scroller .wrap-trending .card-movie .image-movie .shadow-image {
+  border-radius: var(--imageBorderRadius);
+  width: 100%;
+  min-height: calc(150px * 1.5);
+  height: calc(150px * 1.5);
+  background: #dbdbdb;
+  overflow: hidden;
+}
+
+body #trending_scroller .wrap-trending .card-movie .image-movie .wrapper-image {
+  width: 100%;
+  height: 100%;
+}
+
+body #trending_scroller .wrap-trending .card-movie .image-movie .wrapper-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body #trending_scroller .wrap-trending .card-movie .content {
+  margin: 0.5rem;
+}
+
+body #trending_scroller .wrap-trending .card-movie .content h2 {
+  line-height: 0.7;
+}
+
+body #trending_scroller .wrap-trending .card-movie .content h2 a {
+  font-size: 1rem;
+  color: #fff !important;
+  margin: 0;
+  display: inline-block;
+  margin-top: 0.5rem;
+  line-height: 1.2;
+}
+
+body #trending_scroller .wrap-trending .card-movie .content span {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+body #trending_scroller .wrap-trending .card-movie .content .rating {
+  display: inline-block;
+  float: right;
+}
+
+.star {
+  color: #f5c518;
+}
+
 .img-content {
   -webkit-box-shadow: 0 2px 8px black;
           box-shadow: 0 2px 8px black;
@@ -141,8 +237,7 @@ body .hero .hero-search #inner_search {
 }
 
 .card-section {
-  padding: 70px 45px;
-  padding-top: 30px;
+  padding: 30px 45px;
 }
 
 .bg-primary,

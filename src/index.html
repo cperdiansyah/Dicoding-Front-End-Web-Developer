@@ -1,107 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | MovieNesia</title>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-        <div class="container">
-          <a class="navbar-brand" href="#"
-            >Movie<span class="fw-bold">Nesia</span></a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <!-- Hero Section -->
-      <div class="hero w-100">
-        <div class="hero-background card-border">
-          <div class="hero-background-image-filter">
-            <img src="img/hero-img.jpg" alt="" loading="lazy" />
-            <div class="img-gradient"></div>
-          </div>
-        </div>
-        <div class="hero-text text-white">
-          <div class="text-section text-center">
-            <h1>Welcome</h1>
-            <h2>Explore millions of movies and TV shows Now</h2>
-          </div>
-          <div class="hero-search">
-            <form
-              id="inner_search_form"
-              action=""
-              method="get"
-              accept-charset="utf-8"
-            >
-              <input type="hidden" name="language" value="id" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home | MovieNesia</title>
+    </head>
+    <body>
+        <header>
+            <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+                <div class="container">
+                    <a class="navbar-brand" href="#"
+                        >Movie<span class="fw-bold">Nesia</span></a
+                    >
+                </div>
+            </nav> -->
+            <nav-bar></nav-bar>
+        </header>
+        <main>
+            <!-- Hero Section -->
+            <div class="hero w-100">
+                <div class="hero-background card-border">
+                    <div class="hero-background-image-filter">
+                        <img src="img/hero-img.jpg" alt="" loading="lazy" />
+                        <div class="img-gradient"></div>
+                    </div>
+                </div>
+                <div class="hero-text text-white">
+                    <div class="text-section text-center">
+                        <h1>Welcome</h1>
+                        <h2>Explore millions of movies and TV shows Now</h2>
+                    </div>
+                    <div class="hero-search">
+                        <form
+                            id="inner_search_form"
+                            action=""
+                            method="get"
+                            accept-charset="utf-8"
+                        >
+                            <input type="hidden" name="language" value="id" />
 
-              <label class="me-2">
-                <input
-                  dir="auto"
-                  id="inner_search"
-                  name="query"
-                  type="text"
-                  tabindex="1"
-                  autocorrect="off"
-                  autofill="off"
-                  autocomplete="off"
-                  spellcheck="false"
-                  placeholder="Search for a Movie, TV Series, Crew/Actor..."
-                  value=""
-                  class="form-control"
-                />
-              </label>
-              <input
-                class="btn btn-danger fw-bold"
-                type="submit"
-                value="Cari"
-              />
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="trending-section card-section card-border">
-        <div class="title-section">
-          <h4>Trending</h4>
-          <div id="trending_scroller">
-            <div class="wrap-trending">
-              <div class="card-movie">
-                <div class="image"></div>
-                <div class="content"></div>
-              </div>
+                            <label class="me-2">
+                                <input
+                                    dir="auto"
+                                    id="inner_search"
+                                    name="query"
+                                    type="text"
+                                    tabindex="1"
+                                    autocorrect="off"
+                                    autofill="off"
+                                    autocomplete="off"
+                                    spellcheck="false"
+                                    placeholder="Search for a Movie, TV Series, Crew/Actor..."
+                                    value=""
+                                    class="form-control"
+                                />
+                            </label>
+                            <input
+                                class="btn btn-danger fw-bold"
+                                type="submit"
+                                value="Cari"
+                            />
+                        </form>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="popular-section card-section card-border">
-        <div class="title-section">
-          <h4>What's Popular</h4>
-          <div id="trending_scroller">
-            <div class="wrap-trending">
-              <div class="card-movie">
-                <div class="image"></div>
-                <div class="content"></div>
-              </div>
+            <div class="trending-section card-section card-border">
+                <div class="title-section">
+                    <h4>Trending</h4>
+                    <div id="trending_scroller">
+                        <div class="wrap-trending">
+                            <div class="card-movie">
+                                <div class="image-movie">
+                                    <div class="wrapper-image shadow-image">
+                                        <a href="#">
+                                            <img
+                                                src="https://m.media-amazon.com/images/M/MV5BNGM3YzdlOWYtNjViZS00MTE2LWE1MWUtZmE2ZTcxZjcyMmU3XkEyXkFqcGdeQXVyODEyMTI1MjA@._V1_.jpg"
+                                                alt=""
+                                                loading="lazy"
+                                            />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h2><a href="#">The Suicide Squad</a></h2>
+                                    <div class="utils">
+                                        <span>Jul 28, 2021</span>
+
+                                        <div class="rating">
+                                            <i class="star fas fa-star"></i>
+                                            <span>8.0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <footer></footer>
-  </body>
+            <div class="popular-section card-section card-border">
+                <div class="title-section">
+                    <h4>What's Popular</h4>
+                    <div id="trending_scroller">
+                        <div class="wrap-trending">
+                            <div class="card-movie">
+                                <div class="image-movie">
+                                    <div class="wrapper-image shadow-image">
+                                        <a href="#">
+                                            <img
+                                                src="https://m.media-amazon.com/images/M/MV5BNGM3YzdlOWYtNjViZS00MTE2LWE1MWUtZmE2ZTcxZjcyMmU3XkEyXkFqcGdeQXVyODEyMTI1MjA@._V1_.jpg"
+                                                alt=""
+                                                loading="lazy"
+                                            />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h2><a href="#">The Suicide Squad</a></h2>
+                                    <div class="utils">
+                                        <span>Jul 28, 2021</span>
+
+                                        <div class="rating">
+                                            <i class="star fas fa-star"></i>
+                                            <span>8.0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </body>
 </html>

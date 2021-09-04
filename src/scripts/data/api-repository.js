@@ -1,6 +1,6 @@
 import endpoint from './api-config';
 
-class APiResository {
+class ApiRepository {
     static getMovieList(endpoint) {
         return fetch(endpoint)
             .then((response) => {
@@ -19,9 +19,9 @@ class APiResository {
                 return response.json();
             })
             .then((responseJson) => {
-                if(responseJson.results){
+                if (responseJson.results) {
                     return Promise.resolve(responseJson.results);
-                }else{
+                } else {
                     return Promise.reject(`${title} is Not Found`);
                 }
             });
