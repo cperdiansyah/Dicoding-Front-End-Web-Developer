@@ -1,6 +1,6 @@
 import template from '../../utils/dom';
-import html from './navbar.html';
-class NavBar extends HTMLElement {
+import html from './trending.html';
+class Trending extends HTMLElement {
     connectedCallback() {
         this.render();
     }
@@ -9,4 +9,4 @@ class NavBar extends HTMLElement {
     }
 }
 
-customElements.define('nav-bar', NavBar);
+customElements.define('trending-section', Trending);

@@ -1,21 +1,20 @@
+/* Reset CSS */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw');
+/* End Reset CSS */
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
-@import url(c:\laragon\www\movienesia\src\style\reset.css);
 /*Start scroll */
-::-webkit-scrollbar-track,
 ::-webkit-scrollbar-track {
   width: 5px;
   height: 2px;
   background-color: transparent;
 }
 
-::-webkit-scrollbar,
 ::-webkit-scrollbar {
   width: 5px;
   height: 2px;
   background-color: #000;
 }
 
-::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-thumb {
   width: 5px;
   height: 2px;
@@ -23,8 +22,7 @@
   border-radius: var(--imageBorderRadius);
 }
 
-#trending_scroller::-webkit-scrollbar,
-#trending_scroller::-webkit-scrollbar {
+#movie_scroller::-webkit-scrollbar {
   width: 0px;
   height: 8px;
   background-color: #000;
@@ -47,6 +45,11 @@ html {
   --accountRed: 212, 2, 66;
   --imageBorderRadius: 8px;
   --maxPrimaryPageWidth: 1400px;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit;
 }
 
 body {
@@ -152,24 +155,24 @@ body .hero .hero-search #inner_search {
   height: 3rem;
 }
 
-body #trending_scroller {
+body #movie_scroller {
   margin-top: 1.25rem;
   overflow: scroll;
 }
 
-body #trending_scroller .wrap-trending {
+body #movie_scroller .wrap-movie {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 1rem;
 }
 
-body #trending_scroller .wrap-trending .card-movie {
+body #movie_scroller .wrap-movie .card-movie {
   margin-right: 1.25rem;
   width: 150px;
 }
 
-body #trending_scroller .wrap-trending .card-movie .image-movie .shadow-image {
+body #movie_scroller .wrap-movie .card-movie .image-movie .shadow-image {
   border-radius: var(--imageBorderRadius);
   width: 100%;
   min-height: calc(150px * 1.5);
@@ -178,27 +181,27 @@ body #trending_scroller .wrap-trending .card-movie .image-movie .shadow-image {
   overflow: hidden;
 }
 
-body #trending_scroller .wrap-trending .card-movie .image-movie .wrapper-image {
+body #movie_scroller .wrap-movie .card-movie .image-movie .wrapper-image {
   width: 100%;
   height: 100%;
 }
 
-body #trending_scroller .wrap-trending .card-movie .image-movie .wrapper-image img {
+body #movie_scroller .wrap-movie .card-movie .image-movie .wrapper-image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-body #trending_scroller .wrap-trending .card-movie .content {
+body #movie_scroller .wrap-movie .card-movie .content {
   margin: 0.5rem;
 }
 
-body #trending_scroller .wrap-trending .card-movie .content h2 {
+body #movie_scroller .wrap-movie .card-movie .content h2 {
   line-height: 0.7;
 }
 
-body #trending_scroller .wrap-trending .card-movie .content h2 a {
+body #movie_scroller .wrap-movie .card-movie .content h2 a {
   font-size: 1rem;
   color: #fff !important;
   margin: 0;
@@ -207,12 +210,12 @@ body #trending_scroller .wrap-trending .card-movie .content h2 a {
   line-height: 1.2;
 }
 
-body #trending_scroller .wrap-trending .card-movie .content span {
+body #movie_scroller .wrap-movie .card-movie .content span {
   margin: 0;
   font-size: 0.8rem;
 }
 
-body #trending_scroller .wrap-trending .card-movie .content .rating {
+body #movie_scroller .wrap-movie .card-movie .content .rating {
   display: inline-block;
   float: right;
 }

@@ -15,7 +15,7 @@ class ApiRepository {
 
     static searchMovie(title) {
         return fetch(`${endpoint.search}${title}`)
-            .then((respnse) => {
+            .then((response) => {
                 return response.json();
             })
             .then((responseJson) => {

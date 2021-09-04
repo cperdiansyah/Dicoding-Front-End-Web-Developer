@@ -1,6 +1,7 @@
 import template from '../../utils/dom';
-import html from './navbar.html';
-class NavBar extends HTMLElement {
+import html from './hero.html';
+
+class Hero extends HTMLElement {
     connectedCallback() {
         this.render();
     }
@@ -8,5 +9,4 @@ class NavBar extends HTMLElement {
         this.innerHTML = `${template(html)}`;
     }
 }
-
-customElements.define('nav-bar', NavBar);
+customElements.define('hero-section', Hero);

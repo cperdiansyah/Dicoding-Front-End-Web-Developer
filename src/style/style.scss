@@ -1,29 +1,29 @@
+/* Reset CSS */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw');
+/* End Reset CSS */
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-@import './reset.css';
+
 /*Start scroll */
-::-webkit-scrollbar-track,
 ::-webkit-scrollbar-track {
     width: 5px;
     height: 2px;
     background-color: transparent;
 }
 
-::-webkit-scrollbar,
 ::-webkit-scrollbar {
     width: 5px;
     height: 2px;
     background-color: #000;
 }
 
-::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-thumb {
     width: 5px;
     height: 2px;
     background-color: var(--scrollerGrey);
     border-radius: var(--imageBorderRadius);
 }
-#trending_scroller::-webkit-scrollbar,
-#trending_scroller::-webkit-scrollbar {
+#movie_scroller::-webkit-scrollbar {
     width: 0px;
     height: 8px;
     background-color: #000;
@@ -45,6 +45,10 @@ html {
     --accountRed: 212, 2, 66;
     --imageBorderRadius: 8px;
     --maxPrimaryPageWidth: 1400px;
+}
+a {
+    text-decoration: none !important;
+    color: inherit;
 }
 body {
     font-family: 'Nunito Sans', sans-serif !important;
@@ -227,11 +231,11 @@ body {
         }
     }
 
-    #trending_scroller {
+    #movie_scroller {
         margin-top: 1.25rem;
         overflow: scroll;
 
-        .wrap-trending {
+        .wrap-movie {
             display: flex;
             margin-bottom: 1rem;
 

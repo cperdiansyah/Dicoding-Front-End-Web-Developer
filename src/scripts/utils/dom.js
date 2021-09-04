@@ -1,7 +1,14 @@
+
+import '../../style/style.css';
+
 const template = (html) => {
-    const template = `
+    let template = document.createElement('template');
+
+    template = `
 		${html}
 	`;
+    // return template;
+    // return document.importNode(template.content, true);
     return template;
 };
 
