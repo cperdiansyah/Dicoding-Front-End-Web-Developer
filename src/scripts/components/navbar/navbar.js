@@ -29,10 +29,8 @@ class NavBar extends HTMLElement {
           height: 5rem;
           z-index: 10;
         }
-        @import 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css'
       </style> 
         `;
-        // this.shadowDom.innerHTML += `${template(html)}`;
 
         this.shadowDom.innerHTML += `${template(html)}`;
     }
