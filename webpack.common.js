@@ -2,8 +2,14 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+const pages = ['index', 'discover', 'details'];
 module.exports = {
     entry: './src/app.js',
+    /* entry: pages.reduce((config, page) => {
+        config[page] = `./src/${page}.js`;
+        return config;
+    }, {}), */
+
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
@@ -93,31 +99,6 @@ module.exports = {
             }
         ]
     },
-    /* plugin */
-    plugins: [
-        /* HTML Webpack Plugin */
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'src/index.html'),
-            favicon: path.resolve(__dirname, 'src/img/favicon.ico'),
-            filename: 'index.html',
-            minify: {
-                collapseWhitespace: true,
-                removeComments: true,
-                removeRedundantAttributes: true,
-                removeScriptTypeAttributes: true,
-                removeStyleLinkTypeAttributes: true,
-                useShortDoctype: true
-            }
-        }),
-        new CopyWebpackPlugin({
-            patterns: [
-                {
-                    from: path.resolve(__dirname, 'src/img/'),
-                    to: path.resolve(__dirname, 'dist/img/')
-                }
-            ]
-        })
-    ],
     optimization: {
         splitChunks: {
             cacheGroups: {
@@ -128,5 +109,27 @@ module.exports = {
                 }
             }
         }
-    }
+    },
+    /* pulgins */
+    plugins: [].concat(
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, 'src/img/'),
+                    to: path.resolve(__dirname, 'dist/img/')
+                }
+            ]
+        }),
+        pages.map(
+            (page) =>
+                new HtmlWebpackPlugin({
+                    template: path.resolve(
+                        __dirname,
+                        `src/scripts/pages/${page}/${page}.html`
+                    ),
+                    favicon: path.resolve(__dirname, 'src/img/favicon.ico'),
+                    filename: `${page}.html`
+                })
+        )
+    )
 };

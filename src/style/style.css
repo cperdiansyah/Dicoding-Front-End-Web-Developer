@@ -150,7 +150,7 @@ body .hero .hero-search form {
           justify-content: center;
 }
 
-body .hero .hero-search #inner_search {
+body .hero .hero-search #movie-search-box {
   width: 25rem;
   height: 3rem;
 }
@@ -205,8 +205,8 @@ body #movie_scroller .wrap-movie .card-movie .content h2 a {
   font-size: 1rem;
   color: #fff !important;
   margin: 0;
-  display: inline-block;
-  margin-top: 0.5rem;
+  display: block;
+  margin-top: 1rem;
   line-height: 1.2;
 }
 
@@ -218,6 +218,10 @@ body #movie_scroller .wrap-movie .card-movie .content span {
 body #movie_scroller .wrap-movie .card-movie .content .rating {
   display: inline-block;
   float: right;
+}
+
+.image-movie:hover .wrapper-image {
+  width: 120%;
 }
 
 .star {

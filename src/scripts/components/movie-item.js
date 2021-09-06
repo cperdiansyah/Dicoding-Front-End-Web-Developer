@@ -1,11 +1,23 @@
 import moment from 'moment';
 import 'moment/locale/id';
+
 class MovieItem extends HTMLElement {
     set movie(movie) {
         this._movie = movie;
         this.render();
     }
     render() {
+        if (parseInt(this._movie.vote_average) >= 7) {
+            this.star = 'fas fa-star';
+        } else if (
+            parseInt(this._movie.vote_average) < 7 &&
+            parseInt(this._movie.vote_average) >= 4
+        ) {
+            this.star = 'fas fa-star-half';
+        } else {
+            this.star = 'far fa-star-half';
+        }
+
         this.innerHTML = `
             <div class="card-movie">
                     <div class="image-movie">
@@ -23,9 +35,8 @@ class MovieItem extends HTMLElement {
                         </div>
                     </div>
                     <div class="content">
-                        <h2><a href="href="https://www.themoviedb.org/movie/${
-                            this._movie.id
-                        }">${this._movie.title}</a></h2>
+                        <h2><a href="https://www.themoviedb.org/movie/${
+                            this._movie.id}">${this._movie.title}</a></h2>
                         <div class="utils">
                             <span>
                             ${moment(this._movie.release_date).format(
@@ -34,7 +45,7 @@ class MovieItem extends HTMLElement {
                             </span>
 
                             <div class="rating">
-                                <i class="star fas fa-star"></i>
+                                <i class="star ${this.star}"></i>
                                 <span>${this._movie.vote_average}</span>
                             </div>
                         </div>

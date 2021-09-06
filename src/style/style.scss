@@ -224,7 +224,7 @@ body {
                 justify-content: center;
             }
 
-            #inner_search {
+            #movie-search-box {
                 width: 25rem;
                 height: 3rem;
             }
@@ -271,8 +271,8 @@ body {
                             font-size: 1rem;
                             color: #fff !important;
                             margin: 0;
-                            display: inline-block;
-                            margin-top: 0.5rem;
+                            display: block;
+                            margin-top: 1rem;
                             line-height: 1.2;
                         }
                     }
@@ -289,6 +289,9 @@ body {
             }
         }
     }
+}
+.image-movie:hover .wrapper-image {
+    width: 120%;
 }
 
 .star {

@@ -26,5 +26,6 @@ class ApiRepository {
                 }
             });
     }
+    static detailMovies(id) {}
 }
 export default ApiRepository;
