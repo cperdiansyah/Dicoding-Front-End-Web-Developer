@@ -1,7 +1,7 @@
 /* Reset CSS */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw');
 /* End Reset CSS */
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Roboto&display=swap");
 /*Start scroll */
 ::-webkit-scrollbar-track {
   width: 5px;
@@ -54,6 +54,8 @@ a {
 
 body {
   font-family: 'Nunito Sans', sans-serif !important;
+  background-color: #000 !important;
+  color: #fff !important;
 }
 
 body nav {
@@ -73,9 +75,12 @@ body nav {
   z-index: 10;
 }
 
+body nav li {
+  margin: 0 1rem;
+}
+
 body main {
-  background-color: #000;
-  color: #fff;
+  padding: 20px 0;
 }
 
 body .hero {
@@ -99,13 +104,6 @@ body .hero .hero-background .hero-background-image-filter img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-body .hero .hero-background .hero-background-image-filter .img-gradient {
-  background: rgba(0, 0, 0, 0.4);
-  background-image: -moz- oldlinear-gradient(bottom, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(0, 0, 0, 0.8)), color-stop(60%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8)));
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
 }
 
 body .hero .hero-background .hero-background-image-filter .img-gradient {
@@ -151,6 +149,17 @@ body #movie_scroller {
   overflow: scroll;
 }
 
+body #movie_scroller movie-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 body #movie_scroller .wrap-movie {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -160,7 +169,7 @@ body #movie_scroller .wrap-movie {
 
 body #movie_scroller .wrap-movie .card-movie {
   margin-right: 1.25rem;
-  width: 150px;
+  width: 185px;
 }
 
 body #movie_scroller .wrap-movie .card-movie .image-movie:hover a img {
@@ -183,7 +192,7 @@ body #movie_scroller .wrap-movie .card-movie .image-movie .wrapper-image {
 }
 
 body #movie_scroller .wrap-movie .card-movie .image-movie .wrapper-image img {
-  width: 100%;
+  width: 104%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -234,7 +243,7 @@ body #movie_scroller .wrap-movie .card-movie .content span {
 }
 
 .star {
-  color: #f5c518;
+  color: #FF6B00;
 }
 
 .img-content {

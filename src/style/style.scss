@@ -2,7 +2,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw');
 /* End Reset CSS */
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Roboto&display=swap');
 
 /*Start scroll */
 ::-webkit-scrollbar-track {
@@ -52,12 +52,10 @@ a {
 }
 body {
     font-family: 'Nunito Sans', sans-serif !important;
-
+    background-color: #000 !important;
+    color: #fff !important;
     nav {
         background-color: transparent;
-        -webkit-transition: background-color 0.5s;
-        -o-transition: background-color 0.5s;
-        -moz-transition: background-color 0.5s;
         transition: background-color 0.5s;
         position: relative;
         max-width: 1920px;
@@ -70,10 +68,12 @@ body {
         bottom: 0;
         height: 5rem;
         z-index: 10;
+        li {
+            margin: 0 1rem;
+        }
     }
     main {
-        background-color: #000;
-        color: #fff;
+        padding: 20px 0;
     }
     .hero {
         margin-top: -5rem;
@@ -92,42 +92,6 @@ body {
                     width: -webkit-fill-available;
                     height: 100%;
                     object-fit: cover;
-                }
-                .img-gradient {
-                    background: rgba(0, 0, 0, 0.4);
-                    background-image: -webkit-gradient(
-                        linear,
-                        left bottom,
-                        left top,
-                        from(rgba(0, 0, 0, 0.8)),
-                        color-stop(60%, rgba(0, 0, 0, 0)),
-                        to(rgba(0, 0, 0, 0.8))
-                    );
-                    background-image: -webkit-linear-gradient(
-                        bottom,
-                        rgba(0, 0, 0, 0.8) 0,
-                        rgba(0, 0, 0, 0) 60%,
-                        rgba(0, 0, 0, 0.8) 100%
-                    );
-                    background-image: -moz-
-                        oldlinear-gradient(
-                            bottom,
-                            rgba(0, 0, 0, 0.8) 0,
-                            rgba(0, 0, 0, 0) 60%,
-                            rgba(0, 0, 0, 0.8) 100%
-                        );
-                    background-image: -o-linear-gradient(
-                        bottom,
-                        rgba(0, 0, 0, 0.8) 0,
-                        rgba(0, 0, 0, 0) 60%,
-                        rgba(0, 0, 0, 0.8) 100%
-                    );
-                    background-image: linear-gradient(
-                        to top,
-                        rgba(0, 0, 0, 0.8) 0,
-                        rgba(0, 0, 0, 0) 60%,
-                        rgba(0, 0, 0, 0.8) 100%
-                    );
                 }
 
                 .img-gradient {
@@ -230,6 +194,11 @@ body {
     #movie_scroller {
         margin-top: 1.25rem;
         overflow: scroll;
+        movie-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
         .wrap-movie {
             display: flex;
@@ -237,7 +206,7 @@ body {
 
             .card-movie {
                 margin-right: 1.25rem;
-                width: 150px;
+                width: 185px;
                 // height: 255px;
                 .image-movie:hover a img {
                     transform: scale(1.1);
@@ -255,7 +224,7 @@ body {
                         width: 100%;
                         height: 100%;
                         img {
-                            width: 100%;
+                            width: 104%;
                             height: 100%;
                             object-fit: cover;
                             object-position: center;
@@ -295,7 +264,8 @@ body {
 }
 
 .star {
-    color: #f5c518;
+    color: #FF6B00;
+    // box-shadow: 0px 3px 12px #ff6b00;
 }
 
 .img-content {

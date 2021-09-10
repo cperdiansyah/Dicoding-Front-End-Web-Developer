@@ -1,0 +1,135 @@
+body {
+    font-family: 'Roboto', 'Nunito Sans', sans-serif !important;
+    .movie-detail {
+        margin-top: -100px;
+
+        .backdrop {
+            width: 100%;
+            height: 600px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .backdrop-background {
+            z-index: 0;
+            position: absolute;
+            top: -70px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            height: 43.4rem;
+            .backdrop-background-image-filter {
+                img {
+                    width: -webkit-fill-available;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .img-gradient {
+                    position: absolute;
+                    background: rgba(0, 0, 0, 0.3);
+                    background-image: -webkit-gradient(
+                            linear,
+                            left bottom,
+                            left top,
+                            color-stop(50%, rgba(0, 0, 0, 0)),
+                            to(rgba(0, 0, 0, 0.7))
+                        ),
+                        radial-gradient(
+                            50% 100%,
+                            rgba(0, 0, 0, 0) 50%,
+                            rgba(0, 0, 0, 0.7) 100%
+                        );
+                    background-image: -webkit-linear-gradient(
+                            bottom,
+                            rgba(0, 0, 0, 0) 50%,
+                            rgba(0, 0, 0, 0.7) 100%
+                        ),
+                        -webkit-radial-gradient(50% 100%, rgba(0, 0, 0, 0) 50%, rgba(
+                                        0,
+                                        0,
+                                        0,
+                                        0.7
+                                    )
+                                    100%);
+                    background-image: -moz-
+                            oldlinear-gradient(
+                                bottom,
+                                rgba(0, 0, 0, 0) 50%,
+                                rgba(0, 0, 0, 0.7) 100%
+                            ),
+                        -moz- oldradial-gradient(50% 100%, rgba(0, 0, 0, 0) 50%, rgba(
+                                        0,
+                                        0,
+                                        0,
+                                        0.7
+                                    )
+                                    100%);
+                    background-image: -o-linear-gradient(
+                            bottom,
+                            rgba(0, 0, 0, 0) 50%,
+                            rgba(0, 0, 0, 0.7) 100%
+                        ),
+                        -o-radial-gradient(50% 100%, rgba(0, 0, 0, 0) 50%, rgba(
+                                        0,
+                                        0,
+                                        0,
+                                        0.7
+                                    )
+                                    100%);
+                    background-image: linear-gradient(
+                            to top,
+                            rgba(0, 0, 0, 0) 50%,
+                            rgba(0, 0, 0, 0.7) 100%
+                        ),
+                        radial-gradient(
+                            50% 100%,
+                            rgba(0, 0, 0, 0) 50%,
+                            rgba(0, 0, 0, 0.7) 100%
+                        );
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    height: inherit;
+                }
+            }
+        }
+        .backdrop-text {
+            position: relative;
+            width: 100%;
+            padding: 75px 0;
+            z-index: 10;
+            top: 4rem;
+
+            .upper-text-section {
+                height: 141px;
+                width: 467px;
+                .genre {
+                    display: inline-block;
+                }
+                .title {
+                    h2 {
+                        margin-top: 1rem;
+                        font-size: 2.5rem;
+                        line-height: 50.07px;
+                    }
+                }
+                .tagline {
+                    margin-top: -5px;
+                    .tagline-text {
+                        font-style: italic;
+                    }
+                }
+                .rating-runtime {
+                    margin-top: 4px;
+                    .rating {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+            .bottom-text-section {
+            }
+        }
+    }
+}

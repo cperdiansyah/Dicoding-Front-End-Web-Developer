@@ -21,18 +21,20 @@ class MovieItem extends HTMLElement {
         } else {
             this.star = 'far fa-star-half';
         }
+        this.poster =
+            this._movie.poster_path != null
+                ? `https://image.tmdb.org/t/p/w185${this._movie.poster_path}`
+                : 'https://allmovies.tube/assets/img/no-poster.png';
 
         this.innerHTML = `
             <div class="card-movie">
                     <div class="image-movie">
-                        <div class="wrapper-image shadow-image">
-                            <a href="https://www.themoviedb.org/movie/${
-                                this._movie.id
-                            }">
+                        <div class="wrapper-image shadow-image d-flex align-items-center">
+                            <a href="./details.html?movie=${this._movie.id}">
                                 <img
-                                    src="https://image.tmdb.org/t/p/w185${
-                                        this._movie.poster_path
-                                    }" alt="${this._movie.title} Poster"
+                                    src="${this.poster}" alt="${
+            this._movie.title
+        } Poster"
                                     loading="lazy"
                                 />
                             </a>
