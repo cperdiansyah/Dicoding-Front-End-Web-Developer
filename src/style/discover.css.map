@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,AAAA,oBAAoB,CAAC;EACrB,gBAAgB,EAAE,IAAI;EACtB,KAAK,EAAE,IAAI;CACd",
+    "sources": [
+        "discover.scss"
+    ],
+    "names": [],
+    "file": "discover.css"
+}

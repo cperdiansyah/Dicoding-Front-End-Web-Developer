@@ -15,6 +15,23 @@ class MovieList extends HTMLElement {
             this.appendChild(movieItemElement);
         });
     }
+
+    set moviesTable(movies) {
+        this._moviesTable = movies;
+        this.renderTable();
+    }
+    
+    renderTable() {
+        this.innerHTML = '';
+        this._moviesTable.forEach((movie) => {
+            const movieItemElement = document.createElement('tr');
+            movieItemElement.className = 'wrap-movie-table';
+            movieItemElement.movieTable = movie;
+
+            this.appendChild(movieItemElement);
+        });
+    }
+
     renderError(message) {
         this.innerHTML += `<h3 class="text-center text-white">${message}</h3>`;
     }

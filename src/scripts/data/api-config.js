@@ -1,13 +1,19 @@
-const baseUrl = 'https://api.themoviedb.org/3/';
 const apiKey = '?api_key=defd5d714304c7bb88ab0dbb4ac5bccc';
 
+export const BASE_URL = 'https://api.themoviedb.org/3/';
+export const BACKDROP_URL = 'https://image.tmdb.org/t/p/w1280';
+export const POSTER_URL = 'https://image.tmdb.org/t/p/w500';
+export const PROFILE_URL = 'https://image.tmdb.org/t/p/h632';
+
+export const TMDB_API_KEY = 'defd5d714304c7bb88ab0dbb4ac5bccc';
+
 const endpoint = {
-    nowPlaying: `${baseUrl}movie/popular${apiKey}`,
-    trending: `${baseUrl}trending/movie/week${apiKey}`,
-    popular: `${baseUrl}movie/popular${apiKey}`,
-    topRated: `${baseUrl}movie/top_rated${apiKey}`,
-    upcoming: `${baseUrl}movie/upcoming${apiKey}`,
-    search: `${baseUrl}search/movie${apiKey}&query=`
+    nowPlaying: `${BASE_URL}movie/popular${apiKey}`,
+    trending: `${BASE_URL}trending/movie/week${apiKey}`,
+    popular: `${BASE_URL}movie/popular${apiKey}`,
+    topRated: `${BASE_URL}movie/top_rated${apiKey}`,
+    upcoming: `${BASE_URL}movie/upcoming${apiKey}`,
+    search: `${BASE_URL}search/movie${apiKey}&query=`
 };
 
 export default endpoint;

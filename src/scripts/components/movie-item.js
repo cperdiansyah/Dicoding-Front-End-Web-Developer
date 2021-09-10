@@ -6,6 +6,10 @@ class MovieItem extends HTMLElement {
         this._movie = movie;
         this.render();
     }
+    set movieTable(movie) {
+        this._movieTable = movie;
+        this.renderTable();
+    }
     render() {
         if (parseInt(this._movie.vote_average) >= 7) {
             this.star = 'fas fa-star';
@@ -28,7 +32,7 @@ class MovieItem extends HTMLElement {
                                 <img
                                     src="https://image.tmdb.org/t/p/w185${
                                         this._movie.poster_path
-                                    }" alt="${this._movie.title} Poster
+                                    }" alt="${this._movie.title} Poster"
                                     loading="lazy"
                                 />
                             </a>
@@ -36,7 +40,8 @@ class MovieItem extends HTMLElement {
                     </div>
                     <div class="content">
                         <h2><a href="https://www.themoviedb.org/movie/${
-                            this._movie.id}">${this._movie.title}</a></h2>
+                            this._movie.id
+                        }">${this._movie.title}</a></h2>
                         <div class="utils">
                             <span>
                             ${moment(this._movie.release_date).format(

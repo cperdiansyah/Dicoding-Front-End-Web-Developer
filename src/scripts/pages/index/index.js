@@ -1,53 +1,47 @@
 import '../../components/movie-list';
+import '../../components/navbar/navbar';
+import '../../components/hero/hero';
+import '../../components/trending/trending';
+import '../../components/popular/popular';
+
 import endpoint from '../../data/api-config';
 import ApiRepository from '../../data/api-repository';
 
-const index = () => {
+const main = () => {
     const movieListPopular = document.querySelector('#popular movie-list');
     const movieListTrending = document.querySelector('#trending movie-list');
-    const searchElement = document.querySelector('hero-section');
 
-    const searchAction = () => {
-        ApiRepository.searchMovie(searchElement.value);
-    };
-
-    /* Trending Result Fallback*/
+    // Trending Result Fallback
     const renderResultTrending = (results) => {
         movieListTrending.style.display = 'flex';
         movieListTrending.movies = results;
     };
-    const fallbackResultTrending = (message) => {
-        movieListTrending.renderError(message);
-    };
-    /* End Trending */
 
-    /* Popular Result Fallback*/
+    // Popular Result
     const renderResultPopular = (results) => {
         movieListPopular.style.display = 'flex';
         movieListPopular.movies = results;
     };
-    const fallbackResultPopular = (message) => {
-        movieListPopular.renderError(message);
-    };
-    /* End Popular */
 
+    // Table
+    const fallbackResult = (message) => {
+        console.log(renderError(message));
+    };
     const getTrendingMovie = (endpoint) => {
         ApiRepository.getMovieList(endpoint)
             .then(renderResultTrending)
-            .catch(fallbackResultTrending);
+            .catch(fallbackResult);
     };
 
     const getPopularMovie = (endpoint) => {
         ApiRepository.getMovieList(endpoint)
             .then(renderResultPopular)
-            .catch(fallbackResultPopular);
+            .catch(fallbackResult);
     };
-
-    searchElement.clickEvent = searchAction;
 
     // Init view
     getTrendingMovie(endpoint.trending);
     getPopularMovie(endpoint.nowPlaying);
 };
 
-export default index;
+export default main;

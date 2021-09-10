@@ -9,16 +9,8 @@ class Hero extends HTMLElement {
         this.render();
     }
 
-    get value() {
-        return this.querySelector('#movie-search-box').value;
-    }
-
     render() {
         this.innerHTML = `${template(html)}`;
-        this.querySelector('#movie-search-box').addEventListener(
-            'keyup',
-            this._clickEvent
-        );
     }
 }
 customElements.define('hero-section', Hero);

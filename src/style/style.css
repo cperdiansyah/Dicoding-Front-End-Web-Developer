@@ -135,24 +135,15 @@ body .hero .hero-text {
 body .hero .hero-search {
   position: relative;
   width: 100%;
-  padding: 30px 0;
+  padding: 20px 0;
   margin: 0 auto;
   text-align: center;
   z-index: 1;
 }
 
-body .hero .hero-search form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-body .hero .hero-search #movie-search-box {
-  width: 25rem;
-  height: 3rem;
+body .hero .hero-search a {
+  padding: 1rem 5rem;
+  font-size: 1.25rem;
 }
 
 body #movie_scroller {
@@ -170,6 +161,11 @@ body #movie_scroller .wrap-movie {
 body #movie_scroller .wrap-movie .card-movie {
   margin-right: 1.25rem;
   width: 150px;
+}
+
+body #movie_scroller .wrap-movie .card-movie .image-movie:hover a img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 body #movie_scroller .wrap-movie .card-movie .image-movie .shadow-image {
@@ -191,6 +187,16 @@ body #movie_scroller .wrap-movie .card-movie .image-movie .wrapper-image img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  transition: transform 0.35s, -webkit-transform 0.35s;
 }
 
 body #movie_scroller .wrap-movie .card-movie .content {
@@ -210,18 +216,21 @@ body #movie_scroller .wrap-movie .card-movie .content h2 a {
   line-height: 1.2;
 }
 
+body #movie_scroller .wrap-movie .card-movie .content .utils {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 body #movie_scroller .wrap-movie .card-movie .content span {
   margin: 0;
   font-size: 0.8rem;
-}
-
-body #movie_scroller .wrap-movie .card-movie .content .rating {
-  display: inline-block;
-  float: right;
-}
-
-.image-movie:hover .wrapper-image {
-  width: 120%;
 }
 
 .star {

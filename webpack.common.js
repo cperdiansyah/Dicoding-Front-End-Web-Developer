@@ -4,11 +4,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const pages = ['index', 'discover', 'details'];
 module.exports = {
-    entry: './src/app.js',
-    /* entry: pages.reduce((config, page) => {
+    entry: pages.reduce((config, page) => {
         config[page] = `./src/${page}.js`;
         return config;
-    }, {}), */
+    }, {}),
 
     output: {
         filename: '[name].bundle.js',
@@ -128,7 +127,8 @@ module.exports = {
                         `src/scripts/pages/${page}/${page}.html`
                     ),
                     favicon: path.resolve(__dirname, 'src/img/favicon.ico'),
-                    filename: `${page}.html`
+                    filename: `${page}.html`,
+                    chunks: [`${page}`]
                 })
         )
     )
