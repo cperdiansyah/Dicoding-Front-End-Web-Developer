@@ -71,9 +71,14 @@ body {
         li {
             margin: 0 1rem;
         }
+        img {
+            width: 140px;
+            height: 100%;
+            display: inline-block;
+        }
     }
     main {
-        padding: 20px 0;
+        padding-top: 20px;
     }
     .hero {
         margin-top: -5rem;
@@ -97,55 +102,6 @@ body {
                 .img-gradient {
                     position: absolute;
                     background: rgba(0, 0, 0, 0.5);
-                    background-image: -webkit-gradient(
-                            linear,
-                            left bottom,
-                            left top,
-                            color-stop(50%, rgba(0, 0, 0, 0)),
-                            to(rgba(0, 0, 0, 0.7))
-                        ),
-                        radial-gradient(
-                            50% 100%,
-                            rgba(0, 0, 0, 0) 50%,
-                            rgba(0, 0, 0, 0.7) 100%
-                        );
-                    background-image: -webkit-linear-gradient(
-                            bottom,
-                            rgba(0, 0, 0, 0) 50%,
-                            rgba(0, 0, 0, 0.7) 100%
-                        ),
-                        -webkit-radial-gradient(50% 100%, rgba(0, 0, 0, 0) 50%, rgba(
-                                        0,
-                                        0,
-                                        0,
-                                        0.7
-                                    )
-                                    100%);
-                    background-image: -moz-
-                            oldlinear-gradient(
-                                bottom,
-                                rgba(0, 0, 0, 0) 50%,
-                                rgba(0, 0, 0, 0.7) 100%
-                            ),
-                        -moz- oldradial-gradient(50% 100%, rgba(0, 0, 0, 0) 50%, rgba(
-                                        0,
-                                        0,
-                                        0,
-                                        0.7
-                                    )
-                                    100%);
-                    background-image: -o-linear-gradient(
-                            bottom,
-                            rgba(0, 0, 0, 0) 50%,
-                            rgba(0, 0, 0, 0.7) 100%
-                        ),
-                        -o-radial-gradient(50% 100%, rgba(0, 0, 0, 0) 50%, rgba(
-                                        0,
-                                        0,
-                                        0,
-                                        0.7
-                                    )
-                                    100%);
                     background-image: linear-gradient(
                             to top,
                             rgba(0, 0, 0, 0) 50%,
@@ -217,14 +173,13 @@ body {
                         width: 100%;
                         min-height: calc(150px * 1.5);
                         height: calc(150px * 1.5);
-                        background: #dbdbdb;
                         overflow: hidden;
                     }
                     .wrapper-image {
                         width: 100%;
                         height: 100%;
                         img {
-                            width: 104%;
+                            width: 105%;
                             height: 100%;
                             object-fit: cover;
                             object-position: center;
@@ -263,8 +218,9 @@ body {
     }
 }
 
-.star {
-    color: #FF6B00;
+.star,
+.color-heading {
+    color: #ff6b00;
     // box-shadow: 0px 3px 12px #ff6b00;
 }
 

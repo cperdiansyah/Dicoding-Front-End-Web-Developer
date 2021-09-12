@@ -79,8 +79,14 @@ body nav li {
   margin: 0 1rem;
 }
 
+body nav img {
+  width: 140px;
+  height: 100%;
+  display: inline-block;
+}
+
 body main {
-  padding: 20px 0;
+  padding-top: 20px;
 }
 
 body .hero {
@@ -109,7 +115,6 @@ body .hero .hero-background .hero-background-image-filter img {
 body .hero .hero-background .hero-background-image-filter .img-gradient {
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
-  background-image: -moz- oldlinear-gradient(bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%), -moz- oldradial-gradient(50% 100%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.7))), radial-gradient(50% 100%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%), radial-gradient(50% 100%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
   top: 0;
@@ -182,7 +187,6 @@ body #movie_scroller .wrap-movie .card-movie .image-movie .shadow-image {
   width: 100%;
   min-height: calc(150px * 1.5);
   height: calc(150px * 1.5);
-  background: #dbdbdb;
   overflow: hidden;
 }
 
@@ -192,7 +196,7 @@ body #movie_scroller .wrap-movie .card-movie .image-movie .wrapper-image {
 }
 
 body #movie_scroller .wrap-movie .card-movie .image-movie .wrapper-image img {
-  width: 104%;
+  width: 105%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -242,8 +246,9 @@ body #movie_scroller .wrap-movie .card-movie .content span {
   font-size: 0.8rem;
 }
 
-.star {
-  color: #FF6B00;
+.star,
+.color-heading {
+  color: #ff6b00;
 }
 
 .img-content {
