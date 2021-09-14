@@ -1,6 +1,7 @@
 import 'regenerator-runtime';
 import './style/style.css';
 import './style/detail.css';
+import 'animate.css';
 
 import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';

@@ -9,8 +9,8 @@
     <body>
         <nav-bar></nav-bar>
         <main>
-            <!-- <movie-detail></movie-detail> -->
-            <div class="movie-detail">
+            <movie-detail></movie-detail>
+            <!-- <div class="movie-detail">
                 <div class="backdrop">
                     <div class="backdrop-background">
                         <div class="backdrop-background-image-filter">
@@ -167,8 +167,50 @@
                             </div>
                         </div>
                     </div>
+                    <div class="video-modal">
+                        <div class="container p-0 d-flex">
+                            <button
+                                class="btn btn-light text-white-50"
+                                data-bs-toggle="modal"
+                                data-bs-target="#videoModal"
+                            >
+                                <i class="far fa-play-circle button-icon"></i>
+                            </button>
+                        </div>
+
+                        <div
+                            class="modal animate__animated animate__fadeIn"
+                            id="videoModal"
+                            tabindex="-1"
+                            aria-labelledby="videoModalLabel"
+                            aria-hidden="true"
+                            data-bs-backdrop="static"
+                        >
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content bg-black">
+                                    <div class="modal-body">
+                                        <div class="wrap-button">
+                                            <button
+                                                type="button"
+                                                class="
+                                                    btn-close btn-close-white
+                                                "
+                                                aria-label="Close"
+                                            ></button>
+                                        </div>
+                                        <iframe
+                                            class="youtube-video"
+                                            frameborder="0"
+                                            allowfullscreen=""
+                                            src="https://www.youtube.com/embed/8YjFbMbfXaQ?enablejsapi=1&version=3&playerapiid=ytplayer"
+                                        ></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="tiny-info">
+                <div class="tiny-info shadow">
                     <div
                         class="
                             tiny-info-wrapper
@@ -204,247 +246,8 @@
                                             >
                                                 <img
                                                     src="https://image.tmdb.org/t/p/h632/zrJjYjOYzDj7eY9oiHAoz8Yh0yk.jpg"
-                                                    alt=""
-                                                />
-                                                <div
-                                                    class="
-                                                        shadow-image
-                                                        actor-gradient
-                                                    "
-                                                ></div>
-                                            </div>
-                                            <div class="container content">
-                                                <h5 class="fw-bold">
-                                                    Simu Liu
-                                                </h5>
-                                                <p>Shaun / Shang-Chi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="actor-item mb-3">
-                                        <div class="actor-card shadow">
-                                            <div
-                                                class="image-actor shadow-image"
-                                            >
-                                                <img
-                                                    src="https://image.tmdb.org/t/p/h632/zrJjYjOYzDj7eY9oiHAoz8Yh0yk.jpg"
-                                                    alt=""
-                                                />
-                                                <div
-                                                    class="
-                                                        shadow-image
-                                                        actor-gradient
-                                                    "
-                                                ></div>
-                                            </div>
-                                            <div class="container content">
-                                                <h5 class="fw-bold">
-                                                    Simu Liu
-                                                </h5>
-                                                <p>Shaun / Shang-Chi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="actor-item mb-3">
-                                        <div class="actor-card shadow">
-                                            <div
-                                                class="image-actor shadow-image"
-                                            >
-                                                <img
-                                                    src="https://image.tmdb.org/t/p/h632/zrJjYjOYzDj7eY9oiHAoz8Yh0yk.jpg"
-                                                    alt=""
-                                                />
-                                                <div
-                                                    class="
-                                                        shadow-image
-                                                        actor-gradient
-                                                    "
-                                                ></div>
-                                            </div>
-                                            <div class="container content">
-                                                <h5 class="fw-bold">
-                                                    Simu Liu
-                                                </h5>
-                                                <p>Shaun / Shang-Chi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="actor-item mb-3">
-                                        <div class="actor-card shadow">
-                                            <div
-                                                class="image-actor shadow-image"
-                                            >
-                                                <img
-                                                    src="https://image.tmdb.org/t/p/h632/zrJjYjOYzDj7eY9oiHAoz8Yh0yk.jpg"
-                                                    alt=""
-                                                />
-                                                <div
-                                                    class="
-                                                        shadow-image
-                                                        actor-gradient
-                                                    "
-                                                ></div>
-                                            </div>
-                                            <div class="container content">
-                                                <h5 class="fw-bold">
-                                                    Simu Liu
-                                                </h5>
-                                                <p>Shaun / Shang-Chi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="actor-item mb-3">
-                                        <div class="actor-card shadow">
-                                            <div
-                                                class="image-actor shadow-image"
-                                            >
-                                                <img
-                                                    src="https://image.tmdb.org/t/p/h632/zrJjYjOYzDj7eY9oiHAoz8Yh0yk.jpg"
-                                                    alt=""
-                                                />
-                                                <div
-                                                    class="
-                                                        shadow-image
-                                                        actor-gradient
-                                                    "
-                                                ></div>
-                                            </div>
-                                            <div class="container content">
-                                                <h5 class="fw-bold">
-                                                    Simu Liu
-                                                </h5>
-                                                <p>Shaun / Shang-Chi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="actor-item mb-3">
-                                        <div class="actor-card shadow">
-                                            <div
-                                                class="image-actor shadow-image"
-                                            >
-                                                <img
-                                                    src="https://image.tmdb.org/t/p/h632/zrJjYjOYzDj7eY9oiHAoz8Yh0yk.jpg"
-                                                    alt=""
-                                                />
-                                                <div
-                                                    class="
-                                                        shadow-image
-                                                        actor-gradient
-                                                    "
-                                                ></div>
-                                            </div>
-                                            <div class="container content">
-                                                <h5 class="fw-bold">
-                                                    Simu Liu
-                                                </h5>
-                                                <p>Shaun / Shang-Chi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="actor-item mb-3">
-                                        <div class="actor-card shadow">
-                                            <div
-                                                class="image-actor shadow-image"
-                                            >
-                                                <img
-                                                    src="https://image.tmdb.org/t/p/h632/zrJjYjOYzDj7eY9oiHAoz8Yh0yk.jpg"
-                                                    alt=""
-                                                />
-                                                <div
-                                                    class="
-                                                        shadow-image
-                                                        actor-gradient
-                                                    "
-                                                ></div>
-                                            </div>
-                                            <div class="container content">
-                                                <h5 class="fw-bold">
-                                                    Simu Liu
-                                                </h5>
-                                                <p>Shaun / Shang-Chi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="actor-item mb-3">
-                                        <div class="actor-card shadow">
-                                            <div
-                                                class="image-actor shadow-image"
-                                            >
-                                                <img
-                                                    src="https://image.tmdb.org/t/p/h632/zrJjYjOYzDj7eY9oiHAoz8Yh0yk.jpg"
-                                                    alt=""
-                                                />
-                                                <div
-                                                    class="
-                                                        shadow-image
-                                                        actor-gradient
-                                                    "
-                                                ></div>
-                                            </div>
-                                            <div class="container content">
-                                                <h5 class="fw-bold">
-                                                    Simu Liu
-                                                </h5>
-                                                <p>Shaun / Shang-Chi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="actor-item mb-3">
-                                        <div class="actor-card shadow">
-                                            <div
-                                                class="image-actor shadow-image"
-                                            >
-                                                <img
-                                                    src="https://image.tmdb.org/t/p/h632/zrJjYjOYzDj7eY9oiHAoz8Yh0yk.jpg"
-                                                    alt=""
-                                                />
-                                                <div
-                                                    class="
-                                                        shadow-image
-                                                        actor-gradient
-                                                    "
-                                                ></div>
-                                            </div>
-                                            <div class="container content">
-                                                <h5 class="fw-bold">
-                                                    Simu Liu
-                                                </h5>
-                                                <p>Shaun / Shang-Chi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="actor-item mb-3">
-                                        <div class="actor-card shadow">
-                                            <div
-                                                class="image-actor shadow-image"
-                                            >
-                                                <img
-                                                    src="https://image.tmdb.org/t/p/h632/zrJjYjOYzDj7eY9oiHAoz8Yh0yk.jpg"
-                                                    alt=""
-                                                />
-                                                <div
-                                                    class="
-                                                        shadow-image
-                                                        actor-gradient
-                                                    "
-                                                ></div>
-                                            </div>
-                                            <div class="container content">
-                                                <h5 class="fw-bold">
-                                                    Simu Liu
-                                                </h5>
-                                                <p>Shaun / Shang-Chi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="actor-item mb-3">
-                                        <div class="actor-card shadow">
-                                            <div
-                                                class="image-actor shadow-image"
-                                            >
-                                                <img
-                                                    src="https://image.tmdb.org/t/p/h632/zrJjYjOYzDj7eY9oiHAoz8Yh0yk.jpg"
-                                                    alt=""
+                                                    alt="poster"
+                                                    loading="lazy"
                                                 />
                                                 <div
                                                     class="
@@ -466,7 +269,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </main>
     </body>
 </html>

@@ -1,23 +1,6 @@
 /*Start scroll */
-::-webkit-scrollbar-track {
-    width: 5px;
-    height: 2px;
-    background-color: transparent;
-}
 
-::-webkit-scrollbar {
-    width: 5px;
-    height: 2px;
-    background-color: #000;
-}
-
-::-webkit-scrollbar-thumb {
-    width: 5px;
-    height: 2px;
-    background-color: var(--scrollerGrey);
-    border-radius: var(--imageBorderRadius);
-}
-#movie_scroller::-webkit-scrollbar {
+#actor_scroller::-webkit-scrollbar {
     width: 0px;
     height: 8px;
     background-color: #000;
@@ -27,15 +10,16 @@ html {
     --headingColor: #ff6b00;
     --alternateBlack: #0d0d0d;
     --backgroundAlternateBlack: rgba(13, 13, 13, 0.6);
+    --heightPage: 600px;
 }
 body {
     font-family: 'Roboto', 'Nunito Sans', sans-serif !important;
-    .movie-detail {
+    movie-detail {
         margin-top: -100px;
 
         .backdrop {
             width: 100%;
-            height: 600px;
+            height: var(--heightPage);
             background-repeat: no-repeat;
             background-size: cover;
             .backdrop-background {
@@ -46,7 +30,7 @@ body {
                 right: 0;
                 bottom: 0;
                 overflow: hidden;
-                height: 43.4rem;
+                height: 48.4rem;
                 .backdrop-background-image-filter {
                     img {
                         width: -webkit-fill-available;
@@ -131,6 +115,60 @@ body {
                     }
                 }
             }
+            .video-modal {
+                position: absolute;
+                width: 100%;
+                height: var(--heightPage);
+                top: 0;
+                .container {
+                    margin: calc(var(--heightPage) / 3) auto;
+                    height: calc(var(--heightPage) / 3);
+                    button {
+                        background-color: transparent;
+                        border: none;
+                        // color: #fff;
+                        font-size: 5rem;
+                        z-index: 20;
+                        padding: 0;
+                        height: 80px;
+                        border-radius: 50%;
+                        display: flex;
+                        margin: auto;
+                        .button-icon {
+                            z-index: 15;
+                        }
+                    }
+                    button:hover {
+                        color: #fff !important;
+                    }
+                    button:active {
+                        color: #c8c6c6 !important;
+                    }
+                    button:focus {
+                        outline: none;
+                        box-shadow: none;
+                    }
+                }
+                .modal {
+                    .modal-dialog {
+                        .modal-body {
+                            display: flex;
+                            flex-wrap: wrap;
+                            padding: 0;
+                            height: 550px;
+                            .wrap-button {
+                                position: absolute;
+                                right: 0;
+                                padding: 0.5rem;
+                            }
+                            iframe {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         .tiny-info {
@@ -140,7 +178,7 @@ body {
             background-color: var(--alternateBlack);
             position: relative;
             margin-top: -3rem;
-            border-radius: 30px;
+            border-radius: 25px;
             .tiny-info-wrapper {
                 width: 750px;
                 margin: auto;
@@ -150,8 +188,8 @@ body {
             }
         }
         .movie-detail {
-            height: 600px;
-            padding-top: 9rem;
+            height: 450px;
+            padding-top: 3rem;
             #actor_scroller {
                 margin-top: 1.25rem;
                 overflow: scroll;
@@ -171,6 +209,7 @@ body {
                             height: calc(180px * 1.5);
                             background: #dbdbdb;
                             overflow: hidden;
+                            cursor: pointer;
                         }
 
                         .image-actor:hover img {

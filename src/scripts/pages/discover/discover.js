@@ -11,6 +11,7 @@ const main = () => {
     const movieListElemt = document.querySelector(
         '#discover-movienesia movie-list'
     );
+    
     const resultInfo = (result) => {
         let textNode = document.createTextNode(`No movie was found.`);
         if (result.value.length > 0) {

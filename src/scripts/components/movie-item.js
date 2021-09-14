@@ -6,10 +6,6 @@ class MovieItem extends HTMLElement {
         this._movie = movie;
         this.render();
     }
-    set movieTable(movie) {
-        this._movieTable = movie;
-        this.renderTable();
-    }
     render() {
         if (parseInt(this._movie.vote_average) >= 7) {
             this.star = 'fas fa-star';

@@ -1,24 +1,5 @@
 /*Start scroll */
-::-webkit-scrollbar-track {
-  width: 5px;
-  height: 2px;
-  background-color: transparent;
-}
-
-::-webkit-scrollbar {
-  width: 5px;
-  height: 2px;
-  background-color: #000;
-}
-
-::-webkit-scrollbar-thumb {
-  width: 5px;
-  height: 2px;
-  background-color: var(--scrollerGrey);
-  border-radius: var(--imageBorderRadius);
-}
-
-#movie_scroller::-webkit-scrollbar {
+#actor_scroller::-webkit-scrollbar {
   width: 0px;
   height: 8px;
   background-color: #000;
@@ -29,24 +10,25 @@ html {
   --headingColor: #ff6b00;
   --alternateBlack: #0d0d0d;
   --backgroundAlternateBlack: rgba(13, 13, 13, 0.6);
+  --heightPage: 600px;
 }
 
 body {
   font-family: 'Roboto', 'Nunito Sans', sans-serif !important;
 }
 
-body .movie-detail {
+body movie-detail {
   margin-top: -100px;
 }
 
-body .movie-detail .backdrop {
+body movie-detail .backdrop {
   width: 100%;
-  height: 600px;
+  height: var(--heightPage);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-body .movie-detail .backdrop .backdrop-background {
+body movie-detail .backdrop .backdrop-background {
   z-index: 0;
   position: absolute;
   top: -70px;
@@ -54,17 +36,17 @@ body .movie-detail .backdrop .backdrop-background {
   right: 0;
   bottom: 0;
   overflow: hidden;
-  height: 43.4rem;
+  height: 48.4rem;
 }
 
-body .movie-detail .backdrop .backdrop-background .backdrop-background-image-filter img {
+body movie-detail .backdrop .backdrop-background .backdrop-background-image-filter img {
   width: -webkit-fill-available;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-body .movie-detail .backdrop .backdrop-background .backdrop-background-image-filter .img-gradient {
+body movie-detail .backdrop .backdrop-background .backdrop-background-image-filter .img-gradient {
   position: absolute;
   background: rgba(0, 0, 0, 0.3);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.6))), radial-gradient(50% 100%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
@@ -76,7 +58,7 @@ body .movie-detail .backdrop .backdrop-background .backdrop-background-image-fil
   height: inherit;
 }
 
-body .movie-detail .backdrop .backdrop-text {
+body movie-detail .backdrop .backdrop-text {
   position: relative;
   width: 100%;
   padding: 75px 0;
@@ -84,43 +66,43 @@ body .movie-detail .backdrop .backdrop-text {
   top: 6rem;
 }
 
-body .movie-detail .backdrop .backdrop-text .text .upper-text-section {
+body movie-detail .backdrop .backdrop-text .text .upper-text-section {
   height: 141px;
   width: 467px;
 }
 
-body .movie-detail .backdrop .backdrop-text .text .upper-text-section .genre {
+body movie-detail .backdrop .backdrop-text .text .upper-text-section .genre {
   display: inline-block;
 }
 
-body .movie-detail .backdrop .backdrop-text .text .upper-text-section .title h2 {
+body movie-detail .backdrop .backdrop-text .text .upper-text-section .title h2 {
   margin-top: 1rem;
   font-size: 2.5rem;
   line-height: 50.07px;
 }
 
-body .movie-detail .backdrop .backdrop-text .text .upper-text-section .tagline {
+body movie-detail .backdrop .backdrop-text .text .upper-text-section .tagline {
   margin-top: -5px;
 }
 
-body .movie-detail .backdrop .backdrop-text .text .upper-text-section .tagline .tagline-text {
+body movie-detail .backdrop .backdrop-text .text .upper-text-section .tagline .tagline-text {
   font-style: italic;
 }
 
-body .movie-detail .backdrop .backdrop-text .text .upper-text-section .rating-runtime {
+body movie-detail .backdrop .backdrop-text .text .upper-text-section .rating-runtime {
   margin-top: 4px;
 }
 
-body .movie-detail .backdrop .backdrop-text .text .upper-text-section .rating-runtime .rating {
+body movie-detail .backdrop .backdrop-text .text .upper-text-section .rating-runtime .rating {
   font-size: 1.3rem;
 }
 
-body .movie-detail .backdrop .backdrop-text .text .bottom-text-section {
+body movie-detail .backdrop .backdrop-text .text .bottom-text-section {
   margin-top: 6rem;
   width: 600px;
 }
 
-body .movie-detail .backdrop .backdrop-text .social-wrapper {
+body movie-detail .backdrop .backdrop-text .social-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,72 +116,138 @@ body .movie-detail .backdrop .backdrop-text .social-wrapper {
   padding: 0.2rem 0.5rem;
 }
 
-body .movie-detail .backdrop .backdrop-text .social-wrapper a {
+body movie-detail .backdrop .backdrop-text .social-wrapper a {
   display: block;
 }
 
-body .movie-detail .backdrop .backdrop-text .social-wrapper .social-logo {
+body movie-detail .backdrop .backdrop-text .social-wrapper .social-logo {
   font-size: 1.7rem;
   margin-top: 1rem;
   color: var(--headingColor);
 }
 
-body .movie-detail .tiny-info {
+body movie-detail .backdrop .video-modal {
+  position: absolute;
+  width: 100%;
+  height: var(--heightPage);
+  top: 0;
+}
+
+body movie-detail .backdrop .video-modal .container {
+  margin: calc(var(--heightPage) / 3) auto;
+  height: calc(var(--heightPage) / 3);
+}
+
+body movie-detail .backdrop .video-modal .container button {
+  background-color: transparent;
+  border: none;
+  font-size: 5rem;
+  z-index: 20;
+  padding: 0;
+  height: 80px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+body movie-detail .backdrop .video-modal .container button .button-icon {
+  z-index: 15;
+}
+
+body movie-detail .backdrop .video-modal .container button:hover {
+  color: #fff !important;
+}
+
+body movie-detail .backdrop .video-modal .container button:active {
+  color: #c8c6c6 !important;
+}
+
+body movie-detail .backdrop .video-modal .container button:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body movie-detail .backdrop .video-modal .modal .modal-dialog .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+  height: 550px;
+}
+
+body movie-detail .backdrop .video-modal .modal .modal-dialog .modal-body .wrap-button {
+  position: absolute;
+  right: 0;
+  padding: 0.5rem;
+}
+
+body movie-detail .backdrop .video-modal .modal .modal-dialog .modal-body iframe {
+  width: 100%;
+  height: 100%;
+}
+
+body movie-detail .tiny-info {
   width: 850px;
   margin: auto;
   padding: 2rem 1rem 1rem 1rem;
   background-color: var(--alternateBlack);
   position: relative;
   margin-top: -3rem;
-  border-radius: 30px;
+  border-radius: 25px;
 }
 
-body .movie-detail .tiny-info .tiny-info-wrapper {
+body movie-detail .tiny-info .tiny-info-wrapper {
   width: 750px;
   margin: auto;
 }
 
-body .movie-detail .tiny-info .tiny-info-wrapper h5 {
+body movie-detail .tiny-info .tiny-info-wrapper h5 {
   margin-bottom: 1rem;
 }
 
-body .movie-detail .movie-detail {
-  height: 600px;
-  padding-top: 9rem;
+body movie-detail .movie-detail {
+  height: 450px;
+  padding-top: 3rem;
 }
 
-body .movie-detail .movie-detail #actor_scroller {
+body movie-detail .movie-detail #actor_scroller {
   margin-top: 1.25rem;
   overflow: scroll;
 }
 
-body .movie-detail .movie-detail #actor_scroller .actor-list {
+body movie-detail .movie-detail #actor_scroller .actor-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 1.5rem;
 }
 
-body .movie-detail .movie-detail #actor_scroller .actor-list .actor-card {
+body movie-detail .movie-detail #actor_scroller .actor-list .actor-card {
   margin-right: 1.25rem;
   width: 185px;
 }
 
-body .movie-detail .movie-detail #actor_scroller .actor-list .actor-card .shadow-image {
+body movie-detail .movie-detail #actor_scroller .actor-list .actor-card .shadow-image {
   border-radius: 1.02rem;
   width: 100%;
   min-height: calc(180px * 1.5);
   height: calc(180px * 1.5);
   background: #dbdbdb;
   overflow: hidden;
+  cursor: pointer;
 }
 
-body .movie-detail .movie-detail #actor_scroller .actor-list .actor-card .image-actor:hover img {
+body movie-detail .movie-detail #actor_scroller .actor-list .actor-card .image-actor:hover img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-body .movie-detail .movie-detail #actor_scroller .actor-list .actor-card .image-actor img {
+body movie-detail .movie-detail #actor_scroller .actor-list .actor-card .image-actor img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -216,20 +264,20 @@ body .movie-detail .movie-detail #actor_scroller .actor-list .actor-card .image-
   transition: transform 0.35s, -webkit-transform 0.35s;
 }
 
-body .movie-detail .movie-detail #actor_scroller .actor-list .actor-card .image-actor .actor-gradient {
+body movie-detail .movie-detail #actor_scroller .actor-list .actor-card .image-actor .actor-gradient {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(-8.93%, rgba(37, 37, 37, 0.33)), color-stop(121.13%, rgba(113, 47, 0, 0.88))) !important;
   background: linear-gradient(180deg, rgba(37, 37, 37, 0.33) -8.93%, rgba(113, 47, 0, 0.88) 121.13%) !important;
   position: relative;
   margin-top: -16.9rem;
 }
 
-body .movie-detail .movie-detail #actor_scroller .actor-list .actor-card .content {
+body movie-detail .movie-detail #actor_scroller .actor-list .actor-card .content {
   position: relative;
   margin-top: -3.5rem;
 }
 
-body .movie-detail .movie-detail #actor_scroller .actor-list .actor-card .content h5,
-body .movie-detail .movie-detail #actor_scroller .actor-list .actor-card .content p {
+body movie-detail .movie-detail #actor_scroller .actor-list .actor-card .content h5,
+body movie-detail .movie-detail #actor_scroller .actor-list .actor-card .content p {
   margin: 0;
 }
 
