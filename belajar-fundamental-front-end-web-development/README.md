@@ -1,5 +1,6 @@
 # Belajar Fundamental Front-End Web Development
 
+
 Pada kelas ini mengenalkan penggunaan javascript ke tahap yang lebih advance. Di kelas ini membahas tentang penerapan ES6, pengenalan dan pembuatan Web Components sederhana, penggunaan Node Package Manager (NPM), penerapan webpack dan AJAX sebagai bekal untuk pengembangan website menggunakan Front-End Web Framework
 
 Materi yang dipelajari:
@@ -22,3 +23,5 @@ Referensi dalam pembuatan UI MovieNesia diambil dari :
 2. [Movier - UI design](https://www.figma.com/community/file/979669623099996040/Movier---UI-design)
 3. [Netflix](https://www.netflix.com/id/)
 4. [TMDB](https://www.themoviedb.org/)
+=======
+ 
