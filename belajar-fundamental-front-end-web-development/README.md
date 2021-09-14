@@ -14,6 +14,7 @@ Materi yang dipelajari:
 ## Submission
 
 ### 1. MovieNesia
+[MovieNesia v.1.0](https://cperdiansyah.github.io/Dicoding-Front-End-Web-Developer/belajar-fundamental-front-end-web-development/v.1.0/dist/)
 
 # Reference
 
@@ -23,5 +24,4 @@ Referensi dalam pembuatan UI MovieNesia diambil dari :
 2. [Movier - UI design](https://www.figma.com/community/file/979669623099996040/Movier---UI-design)
 3. [Netflix](https://www.netflix.com/id/)
 4. [TMDB](https://www.themoviedb.org/)
-=======
  
