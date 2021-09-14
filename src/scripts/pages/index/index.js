@@ -23,10 +23,11 @@ const main = () => {
         movieListPopular.movies = results;
     };
 
-    // Table
     const fallbackResult = (message) => {
-        console.log(renderError(message));
+        movieListPopular.renderError(message);
+        movieListTrending.renderError(message);
     };
+
     const getTrendingMovie = (endpoint) => {
         ApiRepository.getMovieList(endpoint)
             .then(renderResultTrending)

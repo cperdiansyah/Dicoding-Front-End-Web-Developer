@@ -285,9 +285,10 @@ body #movie_scroller .wrap-movie .card-movie .content span {
   background-color: #2dce89 !important;
 }
 
-.bg-danger,
-.btn-danger {
-  background-color: #f40612 !important;
+.bg-movie,
+.btn-movie {
+  background-color: #ff6b00 !important;
+  border-color: #ff6b00;
 }
 
 .shadow {

@@ -1,4 +1,5 @@
 import endpoint from './api-config';
+import * as config from './api-config';
 
 class ApiRepository {
     static getMovieList(endpoint) {
@@ -9,6 +10,20 @@ class ApiRepository {
             .then((responseJson) => {
                 if (responseJson.results) {
                     return Promise.resolve(responseJson.results);
+                }
+            });
+    }
+
+    static detailMovies(movies) {
+        return fetch(
+            `${endpoint.details}${movies}${config.apiKey}&language=en-US&append_to_response=recommendations,videos,credits,external_ids`
+        )
+            .then((response) => {
+                return response.json();
+            })
+            .then((responseJson) => {
+                if (responseJson.id) {
+                    return Promise.resolve(responseJson);
                 }
             });
     }
@@ -26,6 +41,5 @@ class ApiRepository {
                 }
             });
     }
-    static detailMovies(id) {}
 }
 export default ApiRepository;

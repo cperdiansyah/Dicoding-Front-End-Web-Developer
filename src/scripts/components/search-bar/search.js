@@ -12,7 +12,6 @@ class Search extends HTMLElement {
 
     render() {
         this.innerHTML = `${template(html)}`;
-        // this.addEventListener('load', this.loadEvent);
     }
 }
 

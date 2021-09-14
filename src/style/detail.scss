@@ -1,9 +1,11 @@
 /*Start scroll */
 
-#actor_scroller::-webkit-scrollbar {
+#actor_scroller::-webkit-scrollbar,
+#recomendation_scroller::-webkit-scrollbar {
     width: 0px;
-    height: 8px;
+    height: 10px;
     background-color: #000;
+    cursor: pointer;
 }
 /* End scroll */
 html {
@@ -14,12 +16,13 @@ html {
 }
 body {
     font-family: 'Roboto', 'Nunito Sans', sans-serif !important;
-    movie-detail {
+    backdrop-section {
         margin-top: -100px;
 
         .backdrop {
             width: 100%;
-            height: var(--heightPage);
+            // height: var(--heightPage);
+            height: 640px;
             background-repeat: no-repeat;
             background-size: cover;
             .backdrop-background {
@@ -30,8 +33,9 @@ body {
                 right: 0;
                 bottom: 0;
                 overflow: hidden;
-                height: 48.4rem;
+                height: 51.4rem;
                 .backdrop-background-image-filter {
+                    height: 100%;
                     img {
                         width: -webkit-fill-available;
                         height: 100%;
@@ -44,7 +48,7 @@ body {
                         background-image: linear-gradient(
                                 to bottom,
                                 rgba(0, 0, 0, 0) 50%,
-                                rgba(0, 0, 0, 0.6) 100%
+                                rgba(0, 0, 0, 0.7) 100%
                             ),
                             radial-gradient(
                                 50% 100%,
@@ -64,8 +68,8 @@ body {
                 width: 100%;
                 padding: 75px 0;
                 z-index: 10;
-                top: 6rem;
-
+                // top: 3rem;
+                top: 0;
                 .text {
                     .upper-text-section {
                         height: 141px;
@@ -187,20 +191,28 @@ body {
                 }
             }
         }
-        .movie-detail {
+    }
+    actor-section,
+    recomendation-section {
+        .movie-detail,
+        .recomendation-section {
             height: 450px;
             padding-top: 3rem;
-            #actor_scroller {
+            #actor_scroller,
+            #recomendation_scroller {
                 margin-top: 1.25rem;
                 overflow: scroll;
 
-                .actor-list {
+                actor-list,
+                movie-list {
                     display: flex;
-                    margin-bottom: 1.5rem;
+                    // height: 300px;
 
                     .actor-card {
                         margin-right: 1.25rem;
                         width: 185px;
+                        display: flex;
+                        flex-wrap: wrap;
 
                         .shadow-image {
                             border-radius: 1.02rem;
@@ -234,14 +246,98 @@ body {
                                 position: relative;
                                 margin-top: -16.9rem;
                             }
+                            a {
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                font-size: 1.3rem;
+                            }
                         }
                         .content {
                             position: relative;
-                            margin-top: -3.5rem;
+                            margin-top: -16.9rem;
+                            flex-wrap: wrap;
+                            align-self: end;
+
                             h5,
                             p {
                                 margin: 0;
+                                font-size: 1rem;
+                                display: block;
+                                width: 100%;
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    recomendation-section {
+        .recomendation-section {
+            height: 550px;
+        }
+        #recomendation_scroller {
+            margin-top: 1.25rem;
+            overflow: scroll;
+            movie-list {
+                display: flex;
+            }
+
+            .wrap-movie {
+                display: flex;
+                margin-bottom: 1rem;
+
+                .card-movie {
+                    margin-right: 1.25rem;
+                    width: 185px;
+                    // height: 255px;
+                    .image-movie:hover a img {
+                        transform: scale(1.1);
+                    }
+                    .image-movie {
+                        .shadow-image {
+                            border-radius: var(--imageBorderRadius);
+                            width: 100%;
+                            min-height: calc(150px * 1.5);
+                            height: calc(150px * 1.5);
+                            overflow: hidden;
+                        }
+                        .wrapper-image {
+                            width: 100%;
+                            height: 100%;
+                            img {
+                                width: 105%;
+                                height: 100%;
+                                object-fit: cover;
+                                object-position: center;
+                                transform: scale(1);
+                                backface-visibility: hidden;
+                                transition: transform 0.35s;
+                            }
+                        }
+                    }
+                    .content {
+                        margin: 0.5rem;
+
+                        h2 {
+                            line-height: 0.7;
+                            a {
+                                font-size: 1rem;
+                                color: #fff !important;
+                                margin: 0;
+                                display: block;
+                                margin-top: 1rem;
+                                line-height: 1.2;
+                            }
+                        }
+                        .utils {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                        span {
+                            margin: 0;
+                            font-size: 0.8rem;
                         }
                     }
                 }

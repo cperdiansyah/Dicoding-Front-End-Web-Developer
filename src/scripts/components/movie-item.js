@@ -6,6 +6,7 @@ class MovieItem extends HTMLElement {
         this._movie = movie;
         this.render();
     }
+
     render() {
         if (parseInt(this._movie.vote_average) >= 7) {
             this.star = 'fas fa-star';
@@ -37,9 +38,9 @@ class MovieItem extends HTMLElement {
                         </div>
                     </div>
                     <div class="content">
-                        <h2><a href="https://www.themoviedb.org/movie/${
-                            this._movie.id
-                        }">${this._movie.title}</a></h2>
+                        <h2><a href="./details.html?movie=${this._movie.id}">${
+            this._movie.title
+        }</a></h2>
                         <div class="utils">
                             <span>
                             ${moment(this._movie.release_date).format(
@@ -49,7 +50,9 @@ class MovieItem extends HTMLElement {
 
                             <div class="rating">
                                 <i class="star ${this.star}"></i>
-                                <span>${this._movie.vote_average}</span>
+                                <span>${this._movie.vote_average.toFixed(
+                                    1
+                                )}</span>
                             </div>
                         </div>
                     </div>

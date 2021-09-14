@@ -1,9 +1,33 @@
+import moment from 'moment';
+import 'moment/locale/id';
+
+class backdrop extends HTMLElement {
+    set movie(movie) {
+        this._movie = movie;
+        this.render();
+    }
+    render() {
+        this.genre = [];
+
+        for (let x in this._movie.genres) {
+            this.genre.push(` ${this._movie.genres[x].name}`);
+        }
+        /* Sorting all video descending */
+        const sorted = this._movie.videos.results.sort((a, b) => {
+            return new Date(a.published_at) - new Date(b.published_at);
+        });
+        /* Find first trailer on sorted video*/
+        const trailer = sorted.find((item) => item.type == 'Trailer');
+
+        this.innerHTML = `
 <div class="backdrop">
     <div class="backdrop-background">
         <div class="backdrop-background-image-filter">
             <img
-                src="https://image.tmdb.org/t/p/w1280/nDLylQOoIazGyYuWhk21Yww5FCb.jpg"
-                alt=""
+                src="https://image.tmdb.org/t/p/w1280/${
+                    this._movie.backdrop_path
+                }"
+                alt="${this._movie.title} backdrop"
                 loading="lazy"
             />
             <div class="img-gradient"></div>
@@ -22,49 +46,41 @@
             <div class="text">
                 <div class="upper-text-section">
                     <div class="genre">
-                        <span>Action,</span>
-                        <span>Adventure,</span>
-                        <span>Fantasy</span>
+                        <span>${this.genre}</span>
                     </div>
                     <div class="title">
                         <h2>
-                            <span class="fw-bold"
-                                >Shang-Chi and the Legend of the Ten Rings</span
-                            >
-                            (2021)
+                            <span class="fw-bold">${this._movie.title}</span>
+                            (${moment(this._movie.release_date).format('YYYY')})
                         </h2>
                     </div>
                     <div class="tagline">
                         <span class="tagline-text text-white-75"
-                            >"You can't outrun your destiny."</span
+                            >"${this._movie.tagline}"</span
                         >
                     </div>
                     <div class="rating-runtime d-flex align-items-center">
                         <div class="runtime me-5">
                             <i class="far fa-clock me-1"></i>
-                            2h 12m
+                            ${this.minutesToHours(this._movie.runtime)}
                         </div>
 
                         <div class="rating">
                             <i class="star fas fa-star"></i>
-                            <span>8</span>
+                            <span>${this._movie.vote_average}</span>
                         </div>
                     </div>
                 </div>
                 <div class="bottom-text-section">
                     <h5 class="fw-bold color-heading underline">Overview</h5>
-                    <div class="overview-text">
-                        Shang-Chi must confront the past he thought he left
-                        behind when he is drawn into the web of the mysterious
-                        Ten Rings organization.
-                    </div>
+                    <div class="overview-text">${this._movie.overview}</div>
                 </div>
             </div>
             <div class="social-media">
                 <div class="social-wrapper radius">
                     <div class="homepage">
                         <a
-                            href="#"
+                            href="${this._movie.homepage}"
                             target="_blank"
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
@@ -75,7 +91,9 @@
                     </div>
                     <div class="facebook">
                         <a
-                            href="#"
+                            href="https://facebook.com/${
+                                this._movie.external_ids.facebook_id
+                            }"
                             target="_blank"
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
@@ -86,7 +104,9 @@
                     </div>
                     <div class="twitter">
                         <a
-                            href="#"
+                            href="https://twitter.com/${
+                                this._movie.external_ids.twitter_id
+                            }"
                             target="_blank"
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
@@ -97,7 +117,9 @@
                     </div>
                     <div class="instagram">
                         <a
-                            href="#"
+                            href="https://instagram.com/${
+                                this._movie.external_ids.instagram_id
+                            }"
                             target="_blank"
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
@@ -108,7 +130,9 @@
                     </div>
                     <div class="imdb">
                         <a
-                            href="#"
+                            href="https://imdb.com/title/${
+                                this._movie.external_ids.imdb_id
+                            }"
                             target="_blank"
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
@@ -153,8 +177,12 @@
                         <iframe
                             class="youtube-video"
                             frameborder="0"
+                            loading="lazy"
                             allowfullscreen=""
-                            src="https://www.youtube.com/embed/8YjFbMbfXaQ?enablejsapi=1&version=3&playerapiid=ytplayer"
+                            src="https://www.youtube.com/embed/${
+                                trailer.key
+                            }?enablejsapi=1&version=3&playerapiid=ytplayer"
+                            alt="${this._movie.title} Trailer"
                         ></iframe>
                     </div>
                 </div>
@@ -166,42 +194,30 @@
     <div class="tiny-info-wrapper d-flex justify-content-between text-center">
         <div class="director">
             <h5 class="fw-bold shadow">Director</h5>
-            <p>Destin Daniel Cretton</p>
+            <p>${
+                this._movie.credits.crew.find((item) => item.job == 'Director')
+                    .name
+            }</p>
         </div>
         <div class="original-tittle">
             <h5 class="fw-bold shadow">Original Tittle</h5>
-            <p>Shang-Chi and the Legend of the Ten Rings</p>
+            <p>${this._movie.original_title}</p>
         </div>
         <div class="revenue">
             <h5 class="fw-bold shadow">Revenue</h5>
-            <p>$150,872,848.00</p>
+            <p>$ ${this._movie.revenue.toLocaleString()}</p>
         </div>
     </div>
 </div>
-<div class="movie-detail">
-    <div class="container p-0">
-        <div class="main-actor">
-            <h4 class="underline fw-bold">Main Actor</h4>
-            <div id="actor_scroller" class="p-0">
-                <div class="actor-list">
-                    <div class="actor-item mb-3">
-                        <div class="actor-card shadow">
-                            <div class="image-actor shadow-image">
-                                <img
-                                    src="https://image.tmdb.org/t/p/h632/zrJjYjOYzDj7eY9oiHAoz8Yh0yk.jpg"
-                                    alt="poster"
-                                    loading="lazy"
-                                />
-                                <div class="shadow-image actor-gradient"></div>
-                            </div>
-                            <div class="container content">
-                                <h5 class="fw-bold">Simu Liu</h5>
-                                <p>Shaun / Shang-Chi</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+`;
+    }
+    minutesToHours(minutes) {
+        const minute = minutes % 60;
+        const hour = (minutes - minute) / 60;
+        return `${hour}h ${minute}m`;
+    }
+    renderError(message) {
+        console.log(message);
+    }
+}
+customElements.define('backdrop-section', backdrop);

@@ -17,7 +17,7 @@ class MovieList extends HTMLElement {
     }
 
     renderError(message) {
-        this.innerHTML += `<h3 class="text-center text-white">${message}</h3>`;
+        console.log(message);
     }
 }
 
