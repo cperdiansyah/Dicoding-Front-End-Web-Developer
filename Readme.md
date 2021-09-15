@@ -10,13 +10,14 @@ Materi yang dipelajari:
 -   **Webpack** : Belajar menggunakan webpack sebagai environment dan build tools dalam membangun website yang optimal.
 -   **Asynchronous JavaScript Request** : Belajar transaksi data melalui protokol HTTP/HTTPS menggunakan fetch API baik pada method GET, POST, PUT, dan DELETE.
 
-## Submission
+## Submission (Github Pages)
 
 ### 1. MovieNesia
 
 [MovieNesia v.1.0](https://cperdiansyah.github.io/Dicoding-Front-End-Web-Developer/belajar-fundamental-front-end-web-development/v.1.0/dist/)
 
 [![wakatime](https://wakatime.com/badge/github/cperdiansyah/Dicoding-Front-End-Web-Developer.svg)](https://wakatime.com/badge/github/cperdiansyah/Dicoding-Front-End-Web-Developer)
+
 # Reference
 
 Referensi dalam pembuatan UI MovieNesia diambil dari :
