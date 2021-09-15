@@ -1,5 +1,6 @@
 import template from '../../utils/dom';
 import html from './search.html';
+import './search.css';
 class Search extends HTMLElement {
     connectedCallback() {
         this.render();

@@ -21,14 +21,13 @@ body {
 
         .backdrop {
             width: 100%;
-            // height: var(--heightPage);
             height: 640px;
             background-repeat: no-repeat;
             background-size: cover;
             .backdrop-background {
                 z-index: 0;
                 position: absolute;
-                top: -70px;
+                top: 0;
                 left: 0;
                 right: 0;
                 bottom: 0;
@@ -63,12 +62,14 @@ body {
                     }
                 }
             }
+            .poster-image {
+                display: none;
+            }
             .backdrop-text {
                 position: relative;
                 width: 100%;
                 padding: 75px 0;
                 z-index: 10;
-                // top: 3rem;
                 top: 0;
                 .text {
                     .upper-text-section {
@@ -206,8 +207,6 @@ body {
                 actor-list,
                 movie-list {
                     display: flex;
-                    // height: 300px;
-
                     .actor-card {
                         margin-right: 1.25rem;
                         width: 185px;
@@ -356,4 +355,123 @@ body {
 }
 .text-white-75 {
     color: rgba(255, 255, 255, 0.75) !important;
+}
+
+@media screen and (max-width: 768px) {
+    .poster-image {
+        display: block !important;
+        position: relative !important;
+        padding: 0 1rem;
+        .card-movie {
+            width: 185px;
+            margin: auto !important;
+            .image-movie:hover a img {
+                transform: scale(1.1);
+            }
+            .image-movie {
+                .shadow-image {
+                    border-radius: var(--imageBorderRadius);
+                    width: 100%;
+                    min-height: calc(150px * 1.5);
+                    height: calc(150px * 1.5);
+                    overflow: hidden;
+                }
+                .wrapper-image {
+                    width: 100%;
+                    height: 100%;
+                    img {
+                        width: 105%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        transform: scale(1);
+                        backface-visibility: hidden;
+                        transition: transform 0.35s;
+                    }
+                }
+            }
+        }
+    }
+    .backdrop {
+        height: 100% !important;
+        .backdrop-background {
+            height: 56.4rem !important;
+            top: 0 !important;
+        }
+        .backdrop-text {
+            padding: 20px 0 !important;
+            .container {
+                justify-content: unset !important;
+                flex-wrap: wrap;
+                .text {
+                    width: 100%;
+                    .upper-text-section {
+                        width: 100% !important;
+                        height: 100% !important;
+                        .title h2 {
+                            font-size: 1.5rem !important;
+                            margin-top: 0 !important;
+                        }
+                    }
+                    .bottom-text-section {
+                        margin-top: 1rem !important;
+                        width: 100% !important;
+                    }
+                }
+                .social-media {
+                    width: 100%;
+                    margin-top: 1rem;
+                    .social-wrapper {
+                        flex-direction: row !important;
+                        justify-content: space-around;
+                        .social-logo {
+                            margin: 1rem !important;
+                        }
+                    }
+                }
+                .rating-runtime {
+                    .rating {
+                        font-size: 1rem !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .video-modal {
+        button {
+            margin: 0 auto !important;
+        }
+    }
+    .tiny-info {
+        width: -webkit-fill-available !important;
+        margin-top: 0 !important;
+        .tiny-info-wrapper {
+            width: 100% !important;
+            h5 {
+                font-size: 1rem;
+            }
+            p {
+                margin-bottom: 0 !important;
+                font-size: 0.9rem !important;
+            }
+        }
+    }
+    actor-section,
+    recomendation-section {
+        .actor-card,
+        .card-movie {
+            width: 155px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .tiny-info {
+        width: -webkit-fill-available !important;
+        width: auto;
+        .tiny-info-wrapper {
+            width: 100% !important;
+        }
+    }
 }

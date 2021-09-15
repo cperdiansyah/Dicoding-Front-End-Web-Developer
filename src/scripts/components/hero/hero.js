@@ -1,5 +1,6 @@
 import template from '../../utils/dom';
 import html from './hero.html';
+import './hero.css';
 class Hero extends HTMLElement {
     connectedCallback() {
         this.render();

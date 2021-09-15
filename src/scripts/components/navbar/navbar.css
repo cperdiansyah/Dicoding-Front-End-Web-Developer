@@ -1,0 +1,16 @@
+.navbar-collapse {
+    display: flex;
+    justify-content: end;
+}
+
+@media screen and (max-width: 768px) {
+    nav.navbar {
+        padding-top: 1rem;
+    }
+    ul.navbar-nav {
+        flex-direction: row !important;
+    }
+    .container {
+        padding: 0 1rem;
+    }
+}

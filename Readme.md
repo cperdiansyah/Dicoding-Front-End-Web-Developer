@@ -14,6 +14,9 @@ Materi yang dipelajari:
 
 ### 1. MovieNesia
 
+[MovieNesia v.1.0](https://cperdiansyah.github.io/Dicoding-Front-End-Web-Developer/belajar-fundamental-front-end-web-development/v.1.0/dist/)
+
+[![wakatime](https://wakatime.com/badge/github/cperdiansyah/Dicoding-Front-End-Web-Developer.svg)](https://wakatime.com/badge/github/cperdiansyah/Dicoding-Front-End-Web-Developer)
 # Reference
 
 Referensi dalam pembuatan UI MovieNesia diambil dari :

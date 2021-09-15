@@ -33,6 +33,24 @@ class backdrop extends HTMLElement {
             <div class="img-gradient"></div>
         </div>
     </div>
+    <div class="poster-image wrap-movie">
+        <div class="card-movie">
+            <div class="image-movie">
+                <div
+                    class="wrapper-image shadow-image d-flex align-items-center"
+                >
+                    <img
+                            src="https://image.tmdb.org/t/p/w185/${
+                                this._movie.poster_path
+                            } "
+                            alt="${this._movie.title} Poster"
+                            loading="lazy"
+                        />
+                </div>
+            </div>
+
+        </div>
+    </div>
     <div class="backdrop-text">
         <div
             class="
@@ -40,7 +58,6 @@ class backdrop extends HTMLElement {
                 d-flex
                 justify-content-between
                 align-items-center
-                p-0
             "
         >
             <div class="text">
@@ -190,8 +207,10 @@ class backdrop extends HTMLElement {
         </div>
     </div>
 </div>
-<div class="tiny-info shadow">
+<div class="container">
+    <div class="tiny-info shadow">
     <div class="tiny-info-wrapper d-flex justify-content-between text-center">
+        
         <div class="director">
             <h5 class="fw-bold shadow">Director</h5>
             <p>${
@@ -208,6 +227,8 @@ class backdrop extends HTMLElement {
             <p>$ ${this._movie.revenue.toLocaleString()}</p>
         </div>
     </div>
+    
+</div>
 </div>
 `;
     }
