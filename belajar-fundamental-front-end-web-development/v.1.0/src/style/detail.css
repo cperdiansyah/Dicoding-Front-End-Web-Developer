@@ -33,7 +33,7 @@ body backdrop-section .backdrop {
 body backdrop-section .backdrop .backdrop-background {
   z-index: 0;
   position: absolute;
-  top: -70px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -62,6 +62,10 @@ body backdrop-section .backdrop .backdrop-background .backdrop-background-image-
   right: 0;
   left: 0;
   height: inherit;
+}
+
+body backdrop-section .backdrop .poster-image {
+  display: none;
 }
 
 body backdrop-section .backdrop .backdrop-text {
@@ -576,5 +580,131 @@ body recomendation-section #recomendation_scroller .wrap-movie .card-movie .cont
 
 .text-white-75 {
   color: rgba(255, 255, 255, 0.75) !important;
+}
+
+@media screen and (max-width: 768px) {
+  .poster-image {
+    display: block !important;
+    position: relative !important;
+    padding: 0 1rem;
+  }
+  .poster-image .card-movie {
+    width: 185px;
+    margin: auto !important;
+  }
+  .poster-image .card-movie .image-movie:hover a img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .poster-image .card-movie .image-movie .shadow-image {
+    border-radius: var(--imageBorderRadius);
+    width: 100%;
+    min-height: calc(150px * 1.5);
+    height: calc(150px * 1.5);
+    overflow: hidden;
+  }
+  .poster-image .card-movie .image-movie .wrapper-image {
+    width: 100%;
+    height: 100%;
+  }
+  .poster-image .card-movie .image-movie .wrapper-image img {
+    width: 105%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+  }
+  .backdrop {
+    height: 100% !important;
+  }
+  .backdrop .backdrop-background {
+    height: 56.4rem !important;
+    top: 0 !important;
+  }
+  .backdrop .backdrop-text {
+    padding: 20px 0 !important;
+  }
+  .backdrop .backdrop-text .container {
+    -webkit-box-pack: unset !important;
+        -ms-flex-pack: unset !important;
+            justify-content: unset !important;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .backdrop .backdrop-text .container .text {
+    width: 100%;
+  }
+  .backdrop .backdrop-text .container .text .upper-text-section {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .backdrop .backdrop-text .container .text .upper-text-section .title h2 {
+    font-size: 1.5rem !important;
+    margin-top: 0 !important;
+  }
+  .backdrop .backdrop-text .container .text .bottom-text-section {
+    margin-top: 1rem !important;
+    width: 100% !important;
+  }
+  .backdrop .backdrop-text .container .social-media {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .backdrop .backdrop-text .container .social-media .social-wrapper {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .backdrop .backdrop-text .container .social-media .social-wrapper .social-logo {
+    margin: 1rem !important;
+  }
+  .backdrop .backdrop-text .container .rating-runtime .rating {
+    font-size: 1rem !important;
+  }
+  .video-modal button {
+    margin: 0 auto !important;
+  }
+  .tiny-info {
+    width: -webkit-fill-available !important;
+    margin-top: 0 !important;
+  }
+  .tiny-info .tiny-info-wrapper {
+    width: 100% !important;
+  }
+  .tiny-info .tiny-info-wrapper h5 {
+    font-size: 1rem;
+  }
+  .tiny-info .tiny-info-wrapper p {
+    margin-bottom: 0 !important;
+    font-size: 0.9rem !important;
+  }
+  actor-section .actor-card,
+  actor-section .card-movie,
+  recomendation-section .actor-card,
+  recomendation-section .card-movie {
+    width: 155px !important;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .tiny-info {
+    width: -webkit-fill-available !important;
+    width: auto;
+  }
+  .tiny-info .tiny-info-wrapper {
+    width: 100% !important;
+  }
 }
 /*# sourceMappingURL=detail.css.map */
