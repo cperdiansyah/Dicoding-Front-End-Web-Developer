@@ -10,7 +10,7 @@ Materi yang dipelajari:
 -   **Webpack** : Belajar menggunakan webpack sebagai environment dan build tools dalam membangun website yang optimal.
 -   **Asynchronous JavaScript Request** : Belajar transaksi data melalui protokol HTTP/HTTPS menggunakan fetch API baik pada method GET, POST, PUT, dan DELETE.
 
-## Submission
+## Submission (Github Pages)
 
 ### 1. MovieNesia
 
