@@ -17,8 +17,17 @@ class backdrop extends HTMLElement {
             return new Date(a.published_at) - new Date(b.published_at);
         });
         /* Find first trailer on sorted video*/
-        const trailer = sorted.find((item) => item.type == 'Trailer');
+        const trailer =
+            sorted.length > 0
+                ? sorted.find((item) => item.type == 'Trailer')
+                : '';
+        /*    console.log(trailer);
+        console.log(trailer != null); */
 
+        const trailerVideo =
+            Object.keys(trailer).length > 0
+                ? `https://www.youtube.com/embed/${trailer.key}?enablejsapi=1&version=3&playerapiid=ytplayer`
+                : '';
         this.innerHTML = `
 <div class="backdrop">
     <div class="backdrop-background">
@@ -196,9 +205,7 @@ class backdrop extends HTMLElement {
                             frameborder="0"
                             loading="lazy"
                             allowfullscreen=""
-                            src="https://www.youtube.com/embed/${
-                                trailer.key
-                            }?enablejsapi=1&version=3&playerapiid=ytplayer"
+                            src="${trailerVideo}"
                             alt="${this._movie.title} Trailer"
                         ></iframe>
                     </div>
