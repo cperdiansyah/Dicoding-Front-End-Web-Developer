@@ -21,9 +21,11 @@ class backdrop extends HTMLElement {
             sorted.length > 0
                 ? sorted.find((item) => item.type == 'Trailer')
                 : '';
+        /*    console.log(trailer);
+        console.log(trailer != null); */
 
         const trailerVideo =
-            trailer.length > 0
+            Object.keys(trailer).length > 0
                 ? `https://www.youtube.com/embed/${trailer.key}?enablejsapi=1&version=3&playerapiid=ytplayer`
                 : '';
         this.innerHTML = `

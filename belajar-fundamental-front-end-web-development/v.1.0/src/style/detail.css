@@ -424,7 +424,7 @@ body recomendation-section .recomendation-section #actor_scroller movie-list .ac
 body recomendation-section .recomendation-section #recomendation_scroller actor-list .actor-card .content,
 body recomendation-section .recomendation-section #recomendation_scroller movie-list .actor-card .content {
   position: relative;
-  margin-top: -16.9rem;
+  margin-top: -4.9rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-item-align: end;
