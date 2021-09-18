@@ -110,6 +110,7 @@ body {
                     flex-direction: column;
                     background-color: var(--backgroundAlternateBlack);
                     padding: 0.2rem 0.5rem;
+                    padding-bottom: 0.7rem;
                     a {
                         display: block;
                     }
@@ -254,7 +255,7 @@ body {
                         }
                         .content {
                             position: relative;
-                            margin-top: -4.9rem;
+                            margin-top: -6.9rem;
                             flex-wrap: wrap;
                             align-self: end;
 
@@ -424,6 +425,7 @@ body {
                     .social-wrapper {
                         flex-direction: row !important;
                         justify-content: space-around;
+                        padding-bottom: 0.2rem !important;
                         .social-logo {
                             margin: 1rem !important;
                         }

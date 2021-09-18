@@ -124,6 +124,7 @@ body backdrop-section .backdrop .backdrop-text .social-wrapper {
           flex-direction: column;
   background-color: var(--backgroundAlternateBlack);
   padding: 0.2rem 0.5rem;
+  padding-bottom: 0.7rem;
 }
 
 body backdrop-section .backdrop .backdrop-text .social-wrapper a {
@@ -424,7 +425,7 @@ body recomendation-section .recomendation-section #actor_scroller movie-list .ac
 body recomendation-section .recomendation-section #recomendation_scroller actor-list .actor-card .content,
 body recomendation-section .recomendation-section #recomendation_scroller movie-list .actor-card .content {
   position: relative;
-  margin-top: -4.9rem;
+  margin-top: -6.9rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-item-align: end;
@@ -666,6 +667,7 @@ body recomendation-section #recomendation_scroller .wrap-movie .card-movie .cont
             flex-direction: row !important;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    padding-bottom: 0.2rem !important;
   }
   .backdrop .backdrop-text .container .social-media .social-wrapper .social-logo {
     margin: 1rem !important;

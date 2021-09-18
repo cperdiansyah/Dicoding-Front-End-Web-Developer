@@ -1,4 +1,3 @@
-
 import '../../style/style.css';
 
 const template = (html) => {
@@ -7,8 +6,6 @@ const template = (html) => {
     template = `
 		${html}
 	`;
-    // return template;
-    // return document.importNode(template.content, true);
     return template;
 };
 
