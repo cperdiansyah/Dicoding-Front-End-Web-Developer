@@ -19,5 +19,6 @@ const tooltipTriggerList = [].slice.call(
 const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl);
 });
+tooltipList;
 
 document.addEventListener('DOMContentLoaded', main);

@@ -24,7 +24,7 @@ Learning Path Front End Web Developer ini didapatkan dari program beasiswa [IDCa
 | :-: | --------------------------------------------- | :---------: | :-----------------------------------------------------: |
 |  1  | Belajar Dasar Pemrograman Web                 | 20-07-2020  | [→](https://www.dicoding.com/certificates/981P29KKOXOY) |
 |  2  | Belajar Membuat Front-End Web untuk Pemula    | 18-07-2021  | [→](https://www.dicoding.com/certificates/72ZDEE3NJPYW) |
-|  3  | Belajar Fundamental Front-End Web Development | On Progress |                         [→](#)                          |
+|  3  | Belajar Fundamental Front-End Web Development | 19-09-2021 | [→](https://www.dicoding.com/certificates/98XWK59Y4XM3) |
 
 ## Special Thanks :pray:
 

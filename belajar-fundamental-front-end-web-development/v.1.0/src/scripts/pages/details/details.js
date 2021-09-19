@@ -64,6 +64,8 @@ const main = () => {
     if (urlParams.length > 0) {
         window.onload = onLoadAction();
     }
+
+    
 };
 
 export default main;
