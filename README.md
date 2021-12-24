@@ -12,19 +12,26 @@ Learning Path Front End Web Developer ini didapatkan dari program beasiswa [IDCa
 
 ## Submission
 
+### Landing Page
 - [Belajar Dasar Pemrograman Web →](https://github.com/cperdiansyah/Dicoding-Front-End-Web-Developer/tree/main/belajar-dasar-pemrograman-web)
 
+### Bookshelf App
 - [Belajar Membuat Front-End Web untuk Pemula →](https://github.com/cperdiansyah/Dicoding-Front-End-Web-Developer/tree/main/belajar-membuat-front-end-web-untuk-pemula)
 
+### Movienesia - Movie Catalog App (TMDB API) 
 - [Belajar Fundamental Front-End Web Development →](https://github.com/cperdiansyah/Dicoding-Front-End-Web-Developer/tree/main/belajar-fundamental-front-end-web-development)
+
+### Makan.In - Restaurant Catalog App (Dicoding API)
+
 
 ## Result
 
-| No. | Course                                        |   Issued    |                        Cert link                        |
+| No. | Course                                        |   Completed    |                        Certificate link                        |
 | :-: | --------------------------------------------- | :---------: | :-----------------------------------------------------: |
 |  1  | Belajar Dasar Pemrograman Web                 | 20-07-2020  | [→](https://www.dicoding.com/certificates/981P29KKOXOY) |
 |  2  | Belajar Membuat Front-End Web untuk Pemula    | 18-07-2021  | [→](https://www.dicoding.com/certificates/72ZDEE3NJPYW) |
 |  3  | Belajar Fundamental Front-End Web Development | 19-09-2021 | [→](https://www.dicoding.com/certificates/98XWK59Y4XM3) |
+|  4  | Menjadi Front-End Web Developer Expert | 24-12-2021 | [→](https://www.dicoding.com/certificates/N9ZOEQEDYXG5) |
 
 ## Special Thanks :pray:
 
