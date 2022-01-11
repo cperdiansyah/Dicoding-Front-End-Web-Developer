@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,14 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [HomeController::class, 'index']);
+
+Route::group(["middleware" => ['guest']], function () {
+    Route::get('/user/{id}', [UserController::class, 'show']);
 });
 
-Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
+Route::group(["middleware" => ['auth:sanctum', 'verified']], function () {
     Route::view('/dashboard', "dashboard")->name('dashboard');
 
-    Route::get('/user', [ UserController::class, "index_view" ])->name('user');
+    Route::get('/user', [UserController::class, "index_view"])->name('user');
     Route::view('/user/new', "pages.user.user-new")->name('user.new');
     Route::view('/user/edit/{userId}', "pages.user.user-edit")->name('user.edit');
 });

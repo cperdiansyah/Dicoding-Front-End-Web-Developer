@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title> @isset($title) {{ $title }} @endisset | Toko Inez</title>
+    <title>Admin | {{ config('app.name', 'Laravel') }}</title>
 
     @isset($meta)
         {{ $meta }}
@@ -18,10 +18,11 @@
         rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/tailwind.css') }}">
+    <link rel="stylesheet" href="{{ asset('stisla/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('stisla/css/components.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/notyf/notyf.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
     <link rel="shortcut icon" href="./images/favicon.jpeg" type="image/x-icon">
 
     <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css"
@@ -37,19 +38,31 @@
 </head>
 
 <body class="antialiased">
-    @include('costumers.components.navbar')
+    <div id="app">
+        <div class="main-wrapper">
+            @include('components.navbar')
+            @include('components.sidebar')
 
+            <!-- Main Content -->
+            <div class="main-content">
+                <section class="section">
+                    <div class="section-header">
+                        @isset($header_content)
+                            {{ $header_content }}
+                        @else
+                            {{ __('Halaman') }}
+                        @endisset
+                    </div>
 
-    <!-- Main Content -->
-    <div class="main-content">
-        {{ $slot }}
+                    <div class="section-body">
+                        {{ $slot }}
+                    </div>
+                </section>
+            </div>
+        </div>
     </div>
-    @include('costumers.components.footer')
-
-    @stack('js')
 
     @stack('modals')
-
 
     <!-- General JS Scripts -->
     <script src="{{ asset('stisla/js/modules/jquery.min.js') }}"></script>
@@ -67,7 +80,6 @@
     <script src="{{ asset('stisla/js/stisla.js') }}"></script>
     <script src="{{ asset('stisla/js/scripts.js') }}"></script>
 
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <livewire:scripts />
     <script src="{{ mix('js/app.js') }}" defer></script>
 
