@@ -32,6 +32,7 @@ $navigation_links = array_to_object($links);
                 <img class="d-inline-block" width="32px" height="30.61px" src="" alt="">
             </a>
         </div>
+        
         @foreach ($navigation_links as $link)
         <ul class="sidebar-menu">
             <li class="menu-header">{{ $link->text }}</li>

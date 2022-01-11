@@ -1,12 +1,12 @@
 <footer class="">
-    <div class="footer-wrapper container">
+    <div class="footer-wrapper container-sm">
         <div class="footer-wrap-top row col-lg-12 justify-content-between">
 
-            <div class="col-lg-5 footer-brand">
-                <div class="footer-logo">
-                    <img src="/images/content/logo.png" alt="">
+            <div class="col-lg-4 footer-brand ">
+                <div class="footer-logo pr-0">
+                    <img class="pl-0" src="/images/content/toko-inez.png" alt="">
                 </div>
-                <div class="footer-text">
+                <div class="footer-text mt-2">
                     <p>Kualitas terbaik, menambah kekhusyukan menghadap Sang pemberi ampunan </p>
                 </div>
             </div>

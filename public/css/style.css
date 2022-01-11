@@ -102,6 +102,7 @@ nav#navbarCostumer .img-brand {
   height: 35px;
   -o-object-fit: cover;
      object-fit: cover;
+  padding: 5px;
 }
 
 nav#navbarCostumer .dropdown-menu-end {
@@ -202,27 +203,19 @@ nav#navbarCostumer a.dropdown-item:active i {
   animation-name: slideIn;
 }
 
-footer::before {
-  content: "";
-  margin: 0;
+footer {
   border-top: 1px solid #e5e5e5;
-  width: 100%;
-  position: absolute;
+  overflow: hidden;
 }
 
 footer .footer-wrapper {
   padding-top: 5rem;
 }
 
-footer .footer-wrapper div.footer-wrap-top div.footer-brand {
-  width: 250px;
-}
-
 footer .footer-wrapper div.footer-wrap-top div.footer-brand .footer-logo {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 footer .footer-wrapper div.footer-wrap-top div.footer-brand .footer-logo img {
@@ -230,11 +223,7 @@ footer .footer-wrapper div.footer-wrap-top div.footer-brand .footer-logo img {
   height: 50px;
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-footer .footer-wrapper div.footer-wrap-top div.footer-brand .footer-text {
-  margin: 1rem auto 0 auto;
-  width: 233px;
+  padding: 10px;
 }
 
 footer .footer-wrapper div.footer-wrap-top div.footer-brand .footer-text p {
