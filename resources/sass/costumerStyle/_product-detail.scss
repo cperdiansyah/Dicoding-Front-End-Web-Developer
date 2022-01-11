@@ -1,0 +1,115 @@
+#product-detail {
+    &.container-product-detail {
+        padding: 0 5%;
+    }
+
+    .product-detail-wrapper {
+        margin-top: 2.5rem;
+    }
+
+    .image-wrapper {
+        .image-preview {
+            img {
+                border-radius: 25px;
+                width: 400px;
+                height: 400px;
+                object-fit: cover;
+                filter: drop-shadow(1px 3px 4px rgba(0, 0, 0, 0.25));
+            }
+        }
+        .slider-wrapper {
+            max-width: 400px;
+            .button-wrapper {
+                position: absolute;
+                max-width: 405px;
+                width: 100%;
+
+                button.btn-slide {
+                    padding: 0.5rem;
+
+                    &.btn-secondary {
+                        background-color: rgba(108, 117, 125, 0.5);
+                        border: none;
+
+                        &:hover {
+                            background-color: rgba(108, 117, 125, 0.9);
+                        }
+                    }
+                }
+            }
+            .image-option-wrapper {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: hidden;
+
+                .image-items {
+                    padding-right: 10px;
+                    flex: 0 0 auto;
+                    img {
+                        height: 70px;
+                        width: 70px;
+                        border-radius: 10px;
+                        object-fit: cover;
+                        border: 1px solid $primary-color;
+                    }
+                }
+            }
+        }
+    }
+    .title-rating-review-sold {
+        .rating-review-sold {
+            width: 100%;
+            max-width: 400px;
+            justify-content: space-between;
+            font-size: 1.1rem;
+        }
+    }
+    .price-whishlist {
+        .wishlist {
+            button {
+                border: none;
+                background: transparent;
+                cursor: pointer;
+                
+
+                i {
+                    color: $icon-color;
+                    font-size: 2rem;
+                    padding-left: 1rem;
+                }
+            }
+        }
+    }
+    .order-information {
+        #order {
+            .ongkir-wrapper {
+                width: fit-content;
+                padding-left: 4.6rem;
+            }
+            .color-wrapper {
+                a.product-tag-color {
+                    text-decoration: none;
+                    color: $text-black;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 25px;
+                }
+            }
+
+            .order-input {
+                margin-left: 5rem;
+            }
+            #btn-plus,
+            #btn-minus {
+                border-color: #ced4da;
+            }
+            #btn-plus {
+                border-left: none;
+            }
+            #btn-minus {
+                border-right: none;
+            }
+        }
+    }
+}

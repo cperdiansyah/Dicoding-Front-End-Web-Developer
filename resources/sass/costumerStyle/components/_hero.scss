@@ -1,0 +1,24 @@
+section.hero {
+    margin: 90px auto;
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 70px;
+    }
+    .text-hero {
+        margin-top: 20px;
+        width: 350px;
+        font-style: normal;
+        font-weight: 320;
+        font-size: 18px;
+        line-height: 33px;
+    }
+    img {
+        width: 300px;
+        object-fit: cover;
+    }
+    a {
+        padding: 0.5rem 2rem;
+        font-size: 1.1rem;
+    }
+}

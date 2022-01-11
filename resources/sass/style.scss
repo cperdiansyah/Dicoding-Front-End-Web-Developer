@@ -1,0 +1,109 @@
+$primary-color: #ae82de;
+$primary-color-light: #bc8df0;
+$secondary-color: #b0b0b0;
+// $text-white: rgba(244, 234, 255, 1);
+$text-white: #fff;
+$bg-color: #f6f8fd;
+
+$text-white-disabled: rgba(244, 234, 255, 0.8);
+
+$icon-color: #de8282;
+$star-color: #ffce31;
+$text-black: #34364a;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", "Nunito Sans", sans-serif;
+    color: $text-black;
+    list-style-type: none;
+    scroll-behavior: smooth;
+    text-decoration: none;
+ 
+    body {
+        background-color: $bg-color !important;
+    }
+
+    .bg-purple {
+        background-color: $primary-color;
+    }
+    .text-purple {
+        color: $primary-color;
+    }
+    .text-white {
+        color: $text-white;
+    }
+
+    .btn {
+        &.btn-white-outline {
+            background-color: $primary-color;
+            color: $text-white;
+            border: 1px solid $text-white;
+        }
+        &.btn-white {
+            background-color: $text-white;
+            color: $primary-color;
+        }
+        &.btn-purple {
+            background-color: $primary-color;
+            color: $text-white;
+        }
+        &.btn-outline-purple {
+            background-color: $text-white;
+            color: $primary-color;
+            border: 1px solid $primary-color;
+        }
+
+        &.radius {
+            border-radius: 10px;
+        }
+
+        &.radius-15 {
+            border-radius: 15px;
+        }
+    }
+
+    .card {
+        .card-title {
+            font-size: 1.1rem;
+        }
+        &.radius {
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        &.radius-big {
+            border-radius: 25px;
+            overflow: hidden;
+        }
+    }
+    input {
+        &.radius {
+            border-radius: 10px;
+        }
+    }
+
+    .container-product {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0 3%;
+    }
+}
+
+.main-content {
+    padding-top: 70px;
+}
+/* Mainpage Style */
+@import "costumerStyle/main";
+
+/* Homepage Style */
+@import "costumerStyle/home";
+
+/* Productpage Style */
+@import "costumerStyle/product";
+
+/* Loginpage Style */
+@import "costumerStyle/login";
+
+@import "costumerStyle/product-detail";

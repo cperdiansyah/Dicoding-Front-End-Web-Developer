@@ -10,8 +10,10 @@
     "require": {
         "php": "^7.3|^8.0",
         "browner12/helpers": "^3.2",
+        "cviebrock/eloquent-sluggable": "^8.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "itsgoingd/clockwork": "^5.1",
         "laravel/framework": "^8.5",
         "laravel/jetstream": "^1.6",
         "laravel/sanctum": "^2.6",

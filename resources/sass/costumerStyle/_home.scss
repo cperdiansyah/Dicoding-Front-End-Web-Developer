@@ -1,0 +1,24 @@
+div#hero-page {
+    section {
+        &:last-child {
+            margin-bottom: 4rem;
+        }
+        margin-top: 4rem;
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 38px;
+            color: $primary-color;
+        }
+    }
+
+    @import "./components/hero";
+
+    @import "../components/carousel";
+
+    @import "./components/category";
+
+    @import "./components/home-product";
+}
+ 

@@ -1,0 +1,119 @@
+nav#navbarCostumer {
+    min-height: 70px;
+    height: auto;
+    background-color: $primary-color;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.25));
+
+    .img-brand {
+        width: auto;
+        height: 35px;
+        object-fit: cover;
+    }
+
+    .dropdown-menu-end {
+        right: 0;
+        left: auto;
+    }
+
+    .navbar-nav {
+        .nav-item {
+            padding: 0 1rem;
+
+            &:hover .nav-link {
+                color: #fff;
+            }
+
+            .dropdown-menu {
+                transition: 0.3s;
+                border-radius: 10px;
+            }
+
+            a.nav-link {
+                color: $text-white;
+                font-size: 1.05rem;
+                padding-bottom: 0;
+
+                &.active {
+                    font-weight: bold;
+                    border-bottom: 2px solid $text-white;
+                }
+                &.disabled {
+                    color: $text-white-disabled;
+                }
+            }
+        }
+    }
+
+    .user-dropdown {
+        #user-dropdown {
+            width: 65px;
+            padding-right: 20px !important;
+            filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.25));
+        }
+        .dropdown-menu {
+            transition: 0.3s;
+            border-radius: 10px;
+        }
+    }
+
+    a.dropdown-item {
+        &:active,
+        &:active i {
+            background-color: $primary-color;
+            color: $text-white;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .animate {
+        animation-duration: 0.3s;
+        -webkit-animation-duration: 0.3s;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        -webkit-transform: transform;
+        -webkit-opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        -webkit-opacity: 1;
+    }
+
+    0% {
+        -webkit-transform: translateY(1rem);
+        -webkit-opacity: 0;
+    }
+}
+
+.slideIn {
+    -webkit-animation-name: slideIn;
+    animation-name: slideIn;
+}
