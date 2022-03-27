@@ -4,25 +4,25 @@ Kurikulum disusun oleh Dicoding dan pelaku industri di bidang Web Development. S
 
 Learning Path Front End Web Developer ini didapatkan dari program beasiswa [IDCamp Indosat Ooredoo 2021](https://idcamp.indosatooredoo.com/).
 
-## Learning Path
+## Kelas dari Dicoding yang saya selesaikan
+- [x] [Belajar Dasar Pemrograman Web](https://www.dicoding.com/academies/123), Mempelajari komponen-komponen dasar HTML, CSS, dan JavaScript yang merupakan pondasi utama untuk menjadi web developer.
+- [x] [Belajar Membuat Front-End Web untuk Pemula](https://www.dicoding.com/academies/315), Mempelajari lebih dalam JavaScript, DOM manipulation, dan web storage untuk meningkatkan fungsionalitas dan interaktifitas pada website Anda.
+- [x] [Belajar Fundamental Front-End Web Development](https://www.dicoding.com/academies/163), Mempelajari sintaks ES6, Web Component, dan Build Tools dalam membangun website dengan teknik yang simple, reusable, dan optimized.
+- [x] [Menjadi Front-End Web Developer Expert](https://www.dicoding.com/academies/219), Mempelajari teknik-teknik expert serta modern dalam membangun website yang optimal pada seluruh perangkat, terutama pada perangkat mobile.
 
-- [x] [Belajar Dasar Pemrograman Web](https://www.dicoding.com/academies/123), Pelajari komponen-komponen dasar HTML, CSS, dan JavaScript yang merupakan fondasi utama untuk menjadi web developer..
-- [x] [Belajar Membuat Front-End Web untuk Pemula](https://www.dicoding.com/academies/315), Pelajari lebih dalam JavaScript, DOM manipulation, dan web storage untuk meningkatkan fungsionalitas dan interaktifitas pada website Anda.
-- [x] [Belajar Fundamental Front-End Web Development](https://www.dicoding.com/academies/163), Pelajari sintaks ES6, Web Component, dan Build Tools dalam membangun website dengan teknik yang simple, reusable, dan optimized.
-
-## Submission
+## Submission yang dibuat oleh saya pada kelas ini
 
 ### Landing Page
-- [Belajar Dasar Pemrograman Web →](https://github.com/cperdiansyah/Dicoding-Front-End-Web-Developer/tree/main/belajar-dasar-pemrograman-web)
+- [Belajar Dasar Pemrograman Web →](https://cperdiansyah.github.io/dicoding-belajar-dasar-pemrograman-web/app/)
 
 ### Bookshelf App
-- [Belajar Membuat Front-End Web untuk Pemula →](https://github.com/cperdiansyah/Dicoding-Front-End-Web-Developer/tree/main/belajar-membuat-front-end-web-untuk-pemula)
+- [Belajar Membuat Front-End Web untuk Pemula →](https://cperdiansyah.github.io/dicoding-belajar-membuat-front-end-web-untuk-pemula/app/)
 
 ### Movienesia - Movie Catalog App (TMDB API) 
-- [Belajar Fundamental Front-End Web Development →](https://github.com/cperdiansyah/Dicoding-Front-End-Web-Developer/tree/main/belajar-fundamental-front-end-web-development)
+- [Belajar Fundamental Front-End Web Development →](https://cper-fwd-fundamental.netlify.app)
 
 ### Makan.In - Restaurant Catalog App (Dicoding API)
-
+ - [Menjadi Front-End Web Developer Expert →](https://cper-fwd-fundamental.netlify.app)
 
 ## Result
 
