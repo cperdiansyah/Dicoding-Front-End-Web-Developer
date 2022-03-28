@@ -8,16 +8,16 @@ Learning Path [Front End Web Developer](https://www.dicoding.com/learningpaths/2
 ## Submission yang dibuat oleh saya pada kelas ini
 
 ### Belajar Dasar Pemrograman Web
-- [Landing Page →](https://cperdiansyah.github.io/dicoding-belajar-dasar-pemrograman-web/app/)
+- [Landing Page →](https://cperdiansyah.github.io/dicoding-submission-dasar-pemrog-web/app/)
 
 ### Belajar Membuat Front-End Web untuk Pemula
-- [Bookshelf App →](https://cperdiansyah.github.io/dicoding-belajar-membuat-front-end-web-untuk-pemula/app/)
+- [Bookshelf App →](https://cperdiansyah.github.io/dicoding-submission-fwd-pemula/app/)
 
 ### Belajar Fundamental Front-End Web Development 
 - [Movienesia - Movie Catalog App (TMDB API) →](https://cper-fwd-fundamental.netlify.app)
 
 ### Menjadi Front-End Web Developer Expert
-- [ Makan.In - Restaurant Catalog App (Dicoding API) →](https://cper-fwd-fundamental.netlify.app)
+- [ Makan.In - Restaurant Catalog App (Dicoding API) →](https://cperdiansyah-fwd-sub3.netlify.app)
 
 
 ## Repositori kelas dari Dicoding yang saya selesaikan
